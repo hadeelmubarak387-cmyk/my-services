@@ -1,159 +1,131 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>منصة خدماتي</title>
+  <title>خدماتي</title>
+  <!-- مكتبة الأيقونات -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
-      font-family: 'Tahoma', sans-serif;
+      font-family: Tahoma, sans-serif;
+      background: #f4f4f4;
       margin: 0;
-      background: linear-gradient(135deg, #3a7bd5, #6a11cb);
-      color: #333;
-    }
-    header {
-      background: rgba(255,255,255,0.9);
-      padding: 15px;
-      text-align: right;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    header .menu {
-      font-size: 18px;
-      animation: pulse 2s infinite;
-    }
-    .stats {
-      text-align: center;
-      color: white;
-      padding: 40px 20px;
-    }
-    .stats h1 {
-      font-size: 48px;
-      margin: 0;
-      animation: bounce 3s infinite;
-    }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 40px;
-    }
-    .card {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       padding: 20px;
       text-align: center;
-      transition: transform 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-8px);
-    }
-    .card h3 {
-      margin-top: 0;
-      color: #6a11cb;
-      animation: pulse 2s infinite;
-    }
-    .card a {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 15px;
-      background: #3a7bd5;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      animation: bounce 2s infinite;
-    }
-    .features, .vision {
-      background: rgba(255,255,255,0.9);
-      margin: 20px;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .features h2, .vision h2 {
-      color: #3a7bd5;
-      animation: pulse 2s infinite;
     }
 
-    /* Animations */
+    h1 {
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      width: 220px;
+      height: 220px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: bold;
+      color: #444;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: pointer;
+    }
+
+    .card i {
+      font-size: 40px;
+      margin-bottom: 15px;
+      color: #0077b6;
+    }
+
+    /* حركات مختلفة لكل أيقونة */
+    .card:nth-child(1) i {
+      animation: pulse 2s infinite;
+    }
+    .card:nth-child(2) i {
+      animation: rotate 3s infinite linear;
+    }
+    .card:nth-child(3) i {
+      animation: shake 2s infinite;
+    }
+    .card:nth-child(4) i {
+      animation: bounce 2s infinite;
+    }
+
     @keyframes pulse {
       0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
+      50% { transform: scale(1.2); }
       100% { transform: scale(1); }
     }
+
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      75% { transform: translateX(5px); }
+    }
+
     @keyframes bounce {
       0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-5px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .card:hover {
+      transform: translateY(-12px) scale(1.08) rotate(-2deg);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.3);
+      background: linear-gradient(135deg, #ffefba, #ffffff);
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        width: 100%;
+        height: 150px;
+        font-size: 18px;
+      }
+      .card i {
+        font-size: 30px;
+      }
+    }
+
+    .main-content {
+      padding-bottom: 100px;
     }
   </style>
 </head>
 <body>
-
-<header>
-  <div class="menu">⋮ الخدمات | الرؤية | الرسالة | الهدف</div>
-</header>
-
-<section class="stats">
-  <h1>+5000 طالب</h1>
-  <p>+1200 مشروع منجز | 98% رضا العملاء</p>
-</section>
-
-<section class="services">
-  <div class="card">
-    <h3>عمل الواجبات</h3>
-    <p>حل التكاليف والأنشطة الدراسية باحترافية.</p>
-    <a href="https://wa.me/967776280186">تواصل واتساب</a>
+  <h1>خدماتي</h1>
+  <div class="container main-content">
+    <div class="card">
+      <i class="fas fa-laptop-code"></i>
+      تطوير مواقع
+    </div>
+    <div class="card">
+      <i class="fas fa-mobile-alt"></i>
+      تطبيقات جوال
+    </div>
+    <div class="card">
+      <i class="fas fa-chart-line"></i>
+      استشارات أعمال
+    </div>
+    <div class="card">
+      <i class="fas fa-paint-brush"></i>
+      تصميم جرافيك
+    </div>
   </div>
-  <div class="card">
-    <h3>الأبحاث والمشاريع</h3>
-    <p>إعداد أبحاث، مشاريع، وخرائط ذهنية.</p>
-    <a href="https://wa.me/967776280186">تواصل واتساب</a>
-  </div>
-  <div class="card">
-    <h3>كتابة التقارير</h3>
-    <p>تقارير، مقالات، تعابير، وترجمة.</p>
-    <a href="https://wa.me/967776280186">تواصل واتساب</a>
-  </div>
-  <div class="card">
-    <h3>تصاميم وبرزنتيشن</h3>
-    <p>باوربوينت وجرافيك احترافي.</p>
-    <a href="https://wa.me/967776280186">تواصل واتساب</a>
-  </div>
-  <div class="card">
-    <h3>صياغة CV</h3>
-    <p>سيرة ذاتية احترافية.</p>
-    <a href="https://wa.me/967776280186">تواصل واتساب</a>
-  </div>
-  <div class="card">
-    <h3>حل الكريكتال والديسكشن</h3>
-    <p>حل مسائل IQ ومناقشات.</p>
-    <a href="https://wa.me/967776280186">تواصل واتساب</a>
-  </div>
-  <div class="card">
-    <h3>ترجمة وتلخيص</h3>
-    <p>تلخيص الكتب والمحاضرات.</p>
-    <a href="https://wa.me/967776280186">تواصل واتساب</a>
-  </div>
-</section>
-
-<section class="features">
-  <h2>مميزات منصة خدماتي</h2>
-  <ul>
-    <li>هوية بصرية خليجية راقية</li>
-    <li>سهولة الاستخدام</li>
-    <li>تنوع الخدمات الأكاديمية</li>
-    <li>موثوقية عالية مدعومة بالأرقام</li>
-    <li>تواصل مباشر عبر واتساب</li>
-  </ul>
-</section>
-
-<section class="vision">
-  <h2>الرؤية</h2>
-  <p>أن تكون منصة خدماتي الخيار الأول للطلاب العرب.</p>
-  <h2>الرسالة</h2>
-  <p>تقديم خدمات تعليمية وإبداعية عالية الجودة بسرعة واحترافية.</p>
-  <h2>الهدف</h2>
-  <p>تمكين الطلاب من التفوق عبر حلول مبتكرة وموثوقة.</p>
-</section>
-
 </body>
 </html>
