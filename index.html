@@ -1,202 +1,159 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="ar">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>منصة خدماتي</title>
-    <style>
-      :root{
-        --grad-start:#0f62fe; /* أزرق */
-        --grad-end:#6a00f4;   /* بنفسجي */
-        --card-bg:#ffffff;
-        --muted:#6b6b6b;
-        --shadow: 0 6px 18px rgba(15,22,39,0.08);
-        --radius:14px;
-      }
-      *{box-sizing:border-box;font-family: 'Segoe UI', Tahoma, Arial, sans-serif}
-      body{margin:0;background:linear-gradient(135deg,var(--grad-start),var(--grad-end));color:#fff;min-height:100vh}
-      .container{max-width:1100px;margin:40px auto;padding:24px}
-      .header{display:flex;align-items:center;justify-content:space-between}
-      .brand{display:flex;align-items:center;gap:12px}
-      .logo{width:56px;height:56px;border-radius:10px;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;font-weight:700}
-      h1{margin:0;font-size:24px}
-      p.lead{margin:6px 0 0;color:rgba(255,255,255,0.9)}
-      .menu-btn{background:transparent;border:0;color:#fff;font-size:22px;padding:8px;border-radius:8px;cursor:pointer}
-      /* Cards area */
-      .cards-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:28px}
-      .card{background:var(--card-bg);color:#0b2545;border-radius:12px;padding:18px;box-shadow:var(--shadow);min-height:150px;display:flex;flex-direction:column;justify-content:space-between}
-      .card h3{margin:0 0 6px;font-size:18px}
-      .card p{margin:0;color:var(--muted)}
-      .card .actions{display:flex;gap:8px;align-items:center;margin-top:12px}
-      .btn-wa{background:#25D366;color:#fff;border-radius:8px;padding:8px 12px;text-decoration:none;font-weight:600;display:inline-flex;align-items:center;gap:8px}
-      .features, .about{background:rgba(255,255,255,0.06);padding:18px;border-radius:12px;margin-top:22px;color:#fff}
-      .stats{display:flex;gap:18px;margin-top:12px}
-      .stat{background:rgba(255,255,255,0.06);padding:14px;border-radius:10px;min-width:110px;text-align:center}
-      .stat h4{margin:0;font-size:20px}
-      .stat p{margin:6px 0 0;color:rgba(255,255,255,0.85)}
-      /* dropdown menu */
-      .dropdown{position:relative}
-      .menu{position:absolute;top:42px;right:0;background:#fff;color:#0b2545;border-radius:10px;padding:8px;min-width:160px;box-shadow:var(--shadow);display:none;z-index:40}
-      .menu a{display:block;padding:8px 10px;color:inherit;text-decoration:none;border-radius:8px}
-      .menu a:hover{background:rgba(11,37,69,0.04)}
-      /* responsive */
-      @media(max-width:600px){.header{flex-direction:column;align-items:flex-start;gap:12px}}
-      /* small accessibility tweaks */
-      a.btn-wa:focus{outline:3px solid rgba(37,211,102,0.25);outline-offset:2px}
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="header">
-        <div class="brand">
-          <div class="logo" aria-hidden="true">خ</div>
-          <div>
-            <h1>منصة خدماتي</h1>
-            <p class="lead">منصة مميزة بهوية خليجية فخمة لتقديم خدمات أكاديمية وتصميمية</p>
-          </div>
-        </div>
-        <div class="dropdown">
-          <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">⋮</button>
-          <nav class="menu" id="menu" role="menu" aria-hidden="true">
-            <a role="menuitem" href="#services">الخدمات</a>
-            <a role="menuitem" href="#features">المميزات</a>
-            <a role="menuitem" href="#about">الرؤية والرسالة</a>
-            <a role="menuitem" href="#contact">اتصل بنا</a>
-          </nav>
-        </div>
-      </div>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>منصة خدماتي</title>
+  <style>
+    body {
+      font-family: 'Tahoma', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #3a7bd5, #6a11cb);
+      color: #333;
+    }
+    header {
+      background: rgba(255,255,255,0.9);
+      padding: 15px;
+      text-align: right;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    header .menu {
+      font-size: 18px;
+      animation: pulse 2s infinite;
+    }
+    .stats {
+      text-align: center;
+      color: white;
+      padding: 40px 20px;
+    }
+    .stats h1 {
+      font-size: 48px;
+      margin: 0;
+      animation: bounce 3s infinite;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #6a11cb;
+      animation: pulse 2s infinite;
+    }
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: #3a7bd5;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      animation: bounce 2s infinite;
+    }
+    .features, .vision {
+      background: rgba(255,255,255,0.9);
+      margin: 20px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .features h2, .vision h2 {
+      color: #3a7bd5;
+      animation: pulse 2s infinite;
+    }
 
-      <!-- إحصائيات -->
-      <div class="stats" aria-hidden="false">
-        <div class="stat" role="group" aria-label="طلاب راضون"><h4>+1,250</h4><p>طالب راضٍ</p></div>
-        <div class="stat" role="group" aria-label="مشاريع مكتملة"><h4>+3,420</h4><p>مشروع مكتمل</p></div>
-        <div class="stat" role="group" aria-label="تقييم متوسط"><h4>4.9/5</h4><p>تقييم متوسط</p></div>
-      </div>
+    /* Animations */
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+  </style>
+</head>
+<body>
 
-      <!-- الخدمات -->
-      <section id="services" class="cards-wrap" role="list" aria-label="قائمة الخدمات">
-        <article class="card" role="listitem">
-          <div>
-            <h3>عمل الواجبات / التكاليف / الأنشطة</h3>
-            <p>تنفيذ واجبات دقيقة وفق متطلبات المقرر.</p>
-          </div>
-          <div class="actions">
-            <a class="btn-wa" href="https://wa.me/967776280186?text=مرحباً%20أرغب%20بـ%20خدمة%20عمل%20الواجبات" target="_blank" rel="noopener">واتساب</a>
-          </div>
-        </article>
+<header>
+  <div class="menu">⋮ الخدمات | الرؤية | الرسالة | الهدف</div>
+</header>
 
-        <article class="card" role="listitem">
-          <div>
-            <h3>تسليم أبحاث / مشاريع / خرائط ذهنية</h3>
-            <p>أبحاث ومشاريع مرتبة وخرائط ذهنية واضحة.</p>
-          </div>
-          <div class="actions">
-            <a class="btn-wa" href="https://wa.me/967776280186?text=مرحباً%20أرغب%20بـ%20خدمة%20أبحاث%20ومشاريع" target="_blank" rel="noopener">واتساب</a>
-          </div>
-        </article>
+<section class="stats">
+  <h1>+5000 طالب</h1>
+  <p>+1200 مشروع منجز | 98% رضا العملاء</p>
+</section>
 
-        <article class="card" role="listitem">
-          <div>
-            <h3>كتابة تقارير / مقالات / ترجمة</h3>
-            <p>صيغ وكتابات احترافية باللغتين.</p>
-          </div>
-          <div class="actions">
-            <a class="btn-wa" href="https://wa.me/967776280186?text=مرحباً%20أرغب%20بـ%20خدمة%20كتابة%20وترجمة" target="_blank" rel="noopener">واتساب</a>
-          </div>
-        </article>
+<section class="services">
+  <div class="card">
+    <h3>عمل الواجبات</h3>
+    <p>حل التكاليف والأنشطة الدراسية باحترافية.</p>
+    <a href="https://wa.me/967776280186">تواصل واتساب</a>
+  </div>
+  <div class="card">
+    <h3>الأبحاث والمشاريع</h3>
+    <p>إعداد أبحاث، مشاريع، وخرائط ذهنية.</p>
+    <a href="https://wa.me/967776280186">تواصل واتساب</a>
+  </div>
+  <div class="card">
+    <h3>كتابة التقارير</h3>
+    <p>تقارير، مقالات، تعابير، وترجمة.</p>
+    <a href="https://wa.me/967776280186">تواصل واتساب</a>
+  </div>
+  <div class="card">
+    <h3>تصاميم وبرزنتيشن</h3>
+    <p>باوربوينت وجرافيك احترافي.</p>
+    <a href="https://wa.me/967776280186">تواصل واتساب</a>
+  </div>
+  <div class="card">
+    <h3>صياغة CV</h3>
+    <p>سيرة ذاتية احترافية.</p>
+    <a href="https://wa.me/967776280186">تواصل واتساب</a>
+  </div>
+  <div class="card">
+    <h3>حل الكريكتال والديسكشن</h3>
+    <p>حل مسائل IQ ومناقشات.</p>
+    <a href="https://wa.me/967776280186">تواصل واتساب</a>
+  </div>
+  <div class="card">
+    <h3>ترجمة وتلخيص</h3>
+    <p>تلخيص الكتب والمحاضرات.</p>
+    <a href="https://wa.me/967776280186">تواصل واتساب</a>
+  </div>
+</section>
 
-        <article class="card" role="listitem">
-          <div>
-            <h3>تصاميم / برزنتيشن / جرافيك</h3>
-            <p>عروض ومواد بصريّة متقنة وجذابة.</p>
-          </div>
-          <div class="actions">
-            <a class="btn-wa" href="https://wa.me/967776280186?text=مرحباً%20أرغب%20بـ%20خدمة%20تصاميم%20وباوربوينت" target="_blank" rel="noopener">واتساب</a>
-          </div>
-        </article>
+<section class="features">
+  <h2>مميزات منصة خدماتي</h2>
+  <ul>
+    <li>هوية بصرية خليجية راقية</li>
+    <li>سهولة الاستخدام</li>
+    <li>تنوع الخدمات الأكاديمية</li>
+    <li>موثوقية عالية مدعومة بالأرقام</li>
+    <li>تواصل مباشر عبر واتساب</li>
+  </ul>
+</section>
 
-        <article class="card" role="listitem">
-          <div>
-            <h3>صياغة السيرة الذاتية (CV)</h3>
-            <p>سيرة احترافية تُبرز نقاط القوة.</p>
-          </div>
-          <div class="actions">
-            <a class="btn-wa" href="https://wa.me/967776280186?text=مرحباً%20أرغب%20بـ%20خدمة%20صياغة%20السيرة%20الذاتية" target="_blank" rel="noopener">واتساب</a>
-          </div>
-        </article>
+<section class="vision">
+  <h2>الرؤية</h2>
+  <p>أن تكون منصة خدماتي الخيار الأول للطلاب العرب.</p>
+  <h2>الرسالة</h2>
+  <p>تقديم خدمات تعليمية وإبداعية عالية الجودة بسرعة واحترافية.</p>
+  <h2>الهدف</h2>
+  <p>تمكين الطلاب من التفوق عبر حلول مبتكرة وموثوقة.</p>
+</section>
 
-        <article class="card" role="listitem">
-          <div>
-            <h3>حل الكريكتال والديسكشن وIQ</h3>
-            <p>حلول وتعليمات لاختبارات الذكاء والمناقشات.</p>
-          </div>
-          <div class="actions">
-            <a class="btn-wa" href="https://wa.me/967776280186?text=مرحباً%20أرغب%20بـ%20خدمة%20حل%20الكريكتال%20والـIQ" target="_blank" rel="noopener">واتساب</a>
-          </div>
-        </article>
-
-        <article class="card" role="listitem">
-          <div>
-            <h3>ترجمة وتلخيص الكتب والمحاضرات</h3>
-            <p>تلخيصات ومحتوى مترجم بدقة عالية.</p>
-          </div>
-          <div class="actions">
-            <a class="btn-wa" href="https://wa.me/967776280186?text=مرحباً%20أرغب%20بـ%20خدمة%20ترجمة%20وتلخيص" target="_blank" rel="noopener">واتساب</a>
-          </div>
-        </article>
-      </section>
-
-      <!-- المميزات -->
-      <section id="features" class="features" aria-labelledby="features-title">
-        <h3 id="features-title">مميزات منصة خدماتي</h3>
-        <ul>
-          <li>هوية بصرية خليجية فاخرة بتدرجات زرقاء وبنفسجية</li>
-          <li>بطاقات بيضاء أنيقة مع ظلال ناعمة</li>
-          <li>عرض إحصائيات مرئية لتعزيز الثقة</li>
-          <li>تواصل فوري عبر واتساب لكل خدمة</li>
-          <li>واجهة بسيطة وسهلة الاستخدام للطلاب</li>
-        </ul>
-      </section>
-
-      <!-- الرؤية والرسالة -->
-      <section id="about" class="about" aria-labelledby="about-title">
-        <h3 id="about-title">الرؤية</h3>
-        <p>أن نصبح الوجهة الأولى للطلاب الباحثين عن خدمات أكاديمية وتصميمية احترافية في الخليج.</p>
-        <h3>الرسالة</h3>
-        <p>تقديم خدمات دقيقة وموثوقة مع تجربة مستخدم مريحة وجودة عالية.</p>
-        <h3>الهدف</h3>
-        <p>مساعدة الطلاب على النجاح من خلال حلول سريعة تدعم تطلعاتهم التعليمية.</p>
-      </section>
-
-      <footer id="contact" style="margin-top:22px;color:rgba(255,255,255,0.9)">
-        <p>© حقوق منصة خدماتي — للمساعدة والتواصل: <a style="color:#fff;text-decoration:underline" href="https://wa.me/967776 rel="noopener">تواصل عبر واتساب</a></p>
-      </footer>
-    </div>
-
-    <script>
-      // فتح/إغلاق قائمة الثلاث نقاط مع تحسينات الوصول
-      const menuBtn = document.getElementById('menuBtn');
-      const menu = document.getElementById('menu');
-      menuBtn.addEventListener('click', (e)=> {
-        const opened = menu.style.display === 'block';
-        menu.style.display = opened ? 'none' : 'block';
-        menuBtn.setAttribute('aria-expanded', String(!opened));
-        menu.setAttribute('aria-hidden', String(opened));
-      });
- !== menuBtn) {
-          menu.style.display = 'none';
-          menuBtn.setAttribute('aria-expanded','false');
-          menu.setAttribute('aria-hidden','true');
-        }
-      });
-      // إغلاق بالقفل Escape
-      window.addEventListener('keydown', (e)=> {
-        if(e.key === 'Escape') {
-          menu.style.display = 'none';
-          menuBtn.setAttribute('aria-expanded','false');
-          menu.setAttribute('aria-hidden','true');
-        }
-      });
-    </script>
-  </body>
+</body>
 </html>
