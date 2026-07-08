@@ -5,49 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>منصة خدماتي الاحترافية | أبحاث، مشاريع تخرج، برمجة وتصاميم</title>
-    <meta name="description" content="منصة خدماتي تقدم أفضل الخدمات الأكاديمية المتميزة: إعداد أبحاث علمية، حل واجبات وتكاليف، مشاريع تخرج، تقارير وخرائط، برزنتيشن وعروض بوربوينت، ومشاريع برمجية ومونتاج 2D و 3D بشغل مرتب وزين.">
-    <meta name="keywords" content="أبحاث علمية, واجبات وتكاليف, مشاريع تخرج, تقارير, خرائط, برزنتيشن احترافي, مشاريع برمجية, تجهيز مواقع, مونتاج, تصاميم 2D, تصاميم 3D, عروض بوربوينت, خدمات خدماتية">
+    <meta name="description" content="منصة خدماتي تقدم أفضل الخدمات الأكاديمية والتقنية المتميزة بشغل مرتب وزين.">
+    <meta name="keywords" content="أبحاث علمية, واجبات وتكاليف, مشاريع تخرج, تقارير, خرائط, برزنتيشن احترافي">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://771523543.github.io/my-services/">
-    
     <meta name="google-site-verification" content="8XB0L22b9ZJ3VLFcZQecFIAjCF7AKHeV0z9W90i1zow" />
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap');
-        body {
-            font-family: 'Tajawal', sans-serif;
-            background-color: #fcfdfe;
-        }
-        .bg-hero-gradient {
-            background: linear-gradient(180deg, #24498a 0%, #173060 100%);
-        }
-        .card-shadow {
-            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
-        }
-        .accent-border {
-            position: relative;
-        }
-        .accent-border::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 4px;
-            background: linear-gradient(90deg, #c38455, #24498a);
-            border-radius: 2px;
-        }
-    </style>
+    
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="text-slate-800 antialiased overflow-x-hidden">
+<body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden">
 
-    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 py-4 px-4">
+    <header class="main-header sticky top-0 z-50 bg-white border-b border-slate-100 py-4 px-4 shadow-sm">
         <div class="max-w-5xl mx-auto flex justify-between items-center">
             
-            <button id="menuBtn" class="w-10 h-10 flex items-center justify-center bg-slate-100 hover:bg-indigo-50 text-indigo-950 rounded-xl transition-all active:scale-90 cursor-pointer">
+            <button id="menuBtn" class="toggle-menu-btn w-10 h-10 flex items-center justify-center bg-slate-100 text-indigo-950 rounded-xl transition-all cursor-pointer">
                 <i class="fa-solid fa-bars text-xl"></i>
             </button>
 
@@ -55,7 +29,7 @@
                 <div class="flex flex-col text-right">
                     <span class="text-lg font-black tracking-tight text-indigo-950 leading-tight">منصة خدماتي</span>
                 </div>
-                <div class="w-9 h-9 bg-gradient-to-br from-blue-700 to-indigo-900 rounded-xl flex items-center justify-center text-white shadow-md">
+                <div class="brand-logo w-9 h-9 bg-gradient-to-br from-blue-700 to-indigo-950 rounded-xl flex items-center justify-center text-white shadow-md">
                     <i class="fa-solid fa-graduation-cap text-base"></i>
                 </div>
             </div>
@@ -84,161 +58,143 @@
         </div>
     </div>
 
-    <section id="hero" class="bg-hero-gradient text-white pt-16 pb-24 px-4 rounded-b-[2.5rem] shadow-xl text-center relative">
+    <section id="hero" class="hero-section text-white pt-16 pb-24 px-4 rounded-b-[2.5rem] text-center relative shadow-lg">
         <div class="relative z-10 max-w-3xl mx-auto">
             <div class="inline-flex items-center gap-2 bg-white/10 px-4 py-1.5 rounded-full border border-white/20 mb-6">
                 <span class="w-2 h-2 rounded-full bg-amber-400"></span>
                 <span class="text-xs font-medium text-slate-200">منصة التعليم الرقمي والأعمال الاحترافية</span>
             </div>
             <h1 class="text-3xl md:text-5xl font-black leading-tight mb-6">منصة خدماتي الشاملة للأبحاث والبرمجة والتصميم</h1>
-            <p class="text-slate-300 max-w-xl mx-auto text-sm md:text-base leading-relaxed">ننجز أعمالكم بدقة متناهية، وبإشراف متخصصين لضمان أعلى درجات التميز والاحترافية. تصفح خدماتنا واطلب الخدمة بضغطة زر واحدة!</p>
+            <p class="text-slate-300 max-w-xl mx-auto text-sm md:text-base leading-relaxed">ننجز أعمالكم بدقة متناهية، وبإشراف متخصصين لضمان أعلى درجات التميز والاحترافية.</p>
         </div>
     </section>
 
-    <main class="max-w-5xl mx-auto px-4 relative z-20 -mt-8">
+    <main class="max-w-5xl mx-auto px-4 relative z-20 -mt-12">
         
         <section id="services" class="mb-20 pt-8">
             <div class="text-center mb-12">
-                <h2 class="text-2xl md:text-3xl font-black text-slate-900 accent-border">دليل الخدمات المتاحة</h2>
-                <p class="text-slate-500 text-sm mt-4">اضغط على أي خدمة لفتح الشرح الخاص بها وزر التواصل المباشر</p>
+                <h2 class="text-2xl md:text-3xl font-black text-slate-900 section-title">دليل الخدمات المتاحة</h2>
+                <p class="text-slate-500 text-sm mt-4">اضغط على أي خدمة للانتقال مباشرة إلى الواتساب وطلب الخدمة</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                 
-                <div class="bg-white rounded-2xl border border-slate-100 card-shadow overflow-hidden transition-all">
-                    <button class="service-btn w-full p-5 flex justify-between items-center text-right font-bold text-slate-900 hover:bg-slate-50 cursor-pointer" data-target="serv1">
-                        <div class="flex items-center gap-3">
-                            <span class="w-10 h-10 rounded-xl bg-amber-500 text-white flex items-center justify-center text-base shadow-md shadow-amber-100"><i class="fa-solid fa-book-bookmark"></i></span>
-                            <span class="text-sm md:text-base">أبحاث علمية وأكاديمية</span>
-                        </div>
-                        <i class="chevron-icon fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
-                    </button>
-                    <div id="serv1" class="service-content hidden p-5 pt-0 border-t border-slate-50 bg-slate-50/50">
-                        <p class="text-xs text-slate-600 leading-relaxed mt-3">إعداد وصياغة وكتابة الأبحاث العلمية الرصينة والمقالات الأكاديمية وفق المناهج العلمية المعتمدة والتوثيق الدقيق (APA 7th) بخلو تام من السرقة الأدبية والذكاء الاصطناعي وبأعلى جودة.</p>
-                        <a href="https://wa.me/967776280186?text=مرحباً،%20أريد%20طلب%20خدمة%20إعداد%20الأبحاث%20العلمية" target="_blank" class="mt-4 w-full bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2 shadow-md shadow-emerald-100">
-                            <i class="fa-brands fa-whatsapp text-sm"></i> تواصل معنا واطلب الخدمة
-                        </a>
+                <a href="https://wa.me/967776280186?text=مرحباً،%20أريد%20طلب%20خدمة%20إعداد%20الأبحاث%20العلمية" target="_blank" class="custom-card bg-white rounded-2xl border border-slate-100 p-5 flex justify-between items-center text-right font-bold text-slate-900 transition-all">
+                    <div class="flex items-center gap-4">
+                        <span class="icon-box w-12 h-12 rounded-xl bg-amber-500 text-white flex items-center justify-center text-lg"><i class="fa-solid fa-book-bookmark"></i></span>
+                        <span class="text-sm md:text-base font-bold">أبحاث علمية وأكاديمية</span>
                     </div>
-                </div>
+                    <i class="fa-solid fa-arrow-left text-xs text-slate-400 transition-transform"></i>
+                </a>
 
-                <div class="bg-white rounded-2xl border border-slate-100 card-shadow overflow-hidden transition-all">
-                    <button class="service-btn w-full p-5 flex justify-between items-center text-right font-bold text-slate-900 hover:bg-slate-50 cursor-pointer" data-target="serv2">
-                        <div class="flex items-center gap-3">
-                            <span class="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center text-base shadow-md shadow-emerald-100"><i class="fa-solid fa-file-pen"></i></span>
-                            <span class="text-sm md:text-base">حلول الواجبات والتكاليف (TMA)</span>
-                        </div>
-                        <i class="chevron-icon fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
-                    </button>
-                    <div id="serv2" class="service-content hidden p-5 pt-0 border-t border-slate-50 bg-slate-50/50">
-                        <p class="text-xs text-slate-600 leading-relaxed mt-3">مساعدة شاملة ومتميزة في حل وتجهيز كافة الواجبات، الأنشطة، والتقارير الدورية لمختلف التخصصات والجامعات بأسلوب علمي ومنظم يضمن الحصول على الدرجة الكاملة.</p>
-                        <a href="https://wa.me/967776280186?text=مرحباً،%20أريد%20طلب%20مساعدة%20في%20حل%20الواجبات%20والتكاليف" target="_blank" class="mt-4 w-full bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2 shadow-md shadow-emerald-100">
-                            <i class="fa-brands fa-whatsapp text-sm"></i> تواصل معنا واطلب الخدمة
-                        </a>
+                <a href="https://wa.me/967776280186?text=مرحباً،%20أريد%20طلب%20مساعدة%20في%20حل%20الواجبات%20والتكاليف" target="_blank" class="custom-card bg-white rounded-2xl border border-slate-100 p-5 flex justify-between items-center text-right font-bold text-slate-900 transition-all">
+                    <div class="flex items-center gap-4">
+                        <span class="icon-box w-12 h-12 rounded-xl bg-emerald-500 text-white flex items-center justify-center text-lg"><i class="fa-solid fa-file-pen"></i></span>
+                        <span class="text-sm md:text-base font-bold">حلول الواجبات والتكاليف (TMA)</span>
                     </div>
-                </div>
+                    <i class="fa-solid fa-arrow-left text-xs text-slate-400 transition-transform"></i>
+                </a>
 
-                <div class="bg-white rounded-2xl border border-slate-100 card-shadow overflow-hidden transition-all">
-                    <button class="service-btn w-full p-5 flex justify-between items-center text-right font-bold text-slate-900 hover:bg-slate-50 cursor-pointer" data-target="serv3">
-                        <div class="flex items-center gap-3">
-                            <span class="w-10 h-10 rounded-xl bg-blue-500 text-white flex items-center justify-center text-base shadow-md shadow-blue-100"><i class="fa-solid fa-user-graduate"></i></span>
-                            <span class="text-sm md:text-base">مشاريع تخرج متكاملة</span>
-                        </div>
-                        <i class="chevron-icon fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
-                    </button>
-                    <div id="serv3" class="service-content hidden p-5 pt-0 border-t border-slate-50 bg-slate-50/50">
-                        <p class="text-xs text-slate-600 leading-relaxed mt-3">إسناد كامل وإعداد متميز لمشاريع التخرج بدءاً من اقتراح الفكرة وصياغة العناوين والفصول النظرية والعملية، وتصميم الاستبيانات والتحليل الإحصائي وحتى تجهيز ملف المناقشة النهائي.</p>
-                        <a href="https://wa.me/967776280186?text=مرحباً،%20أود%20الاستفسار%20وطلب%20خدمة%20مشاريع%20التخرج" target="_blank" class="mt-4 w-full bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2 shadow-md shadow-emerald-100">
-                            <i class="fa-brands fa-whatsapp text-sm"></i> تواصل معنا واطلب الخدمة
-                        </a>
+                <a href="https://wa.me/967776280186?text=مرحباً،%20أود%20الاستفسار%20وطلب%20خدمة%20مشاريع%20التخرج" target="_blank" class="custom-card bg-white rounded-2xl border border-slate-100 p-5 flex justify-between items-center text-right font-bold text-slate-900 transition-all">
+                    <div class="flex items-center gap-4">
+                        <span class="icon-box w-12 h-12 rounded-xl bg-blue-500 text-white flex items-center justify-center text-lg"><i class="fa-solid fa-user-graduate"></i></span>
+                        <span class="text-sm md:text-base font-bold">مشاريع تخرج متكاملة</span>
                     </div>
-                </div>
+                    <i class="fa-solid fa-arrow-left text-xs text-slate-400 transition-transform"></i>
+                </a>
 
-                <div class="bg-white rounded-2xl border border-slate-100 card-shadow overflow-hidden transition-all">
-                    <button class="service-btn w-full p-5 flex justify-between items-center text-right font-bold text-slate-900 hover:bg-slate-50 cursor-pointer" data-target="serv4">
-                        <div class="flex items-center gap-3">
-                            <span class="w-10 h-10 rounded-xl bg-cyan-500 text-white flex items-center justify-center text-base shadow-md shadow-cyan-100"><i class="fa-solid fa-map-location-dot"></i></span>
-                            <span class="text-sm md:text-base">تقارير وخرائط تخصصية</span>
-                        </div>
-                        <i class="chevron-icon fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
-                    </button>
-                    <div id="serv4" class="service-content hidden p-5 pt-0 border-t border-slate-50 bg-slate-50/50">
-                        <p class="text-xs text-slate-600 leading-relaxed mt-3">كتابة وإعداد التقارير الفنية، الميدانية، والتدريبية الاحترافية لمختلف التخصصات، بالإضافة لتصميم الخرائط الجغرافية والهندسية المتخصصة بدقة عالية باستخدام برامج متطورة.</p>
-                        <a href="https://wa.me/967776280186?text=مرحباً،%20أريد%20طلب%20خدمة%20إعداد%20التقارير%20والخرائط" target="_blank" class="mt-4 w-full bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2 shadow-md shadow-emerald-100">
-                            <i class="fa-brands fa-whatsapp text-sm"></i> تواصل معنا واطلب الخدمة
-                        </a>
+                <a href="https://wa.me/967776280186?text=مرحباً،%20أريد%20طلب%20خدمة%20إعداد%20التقارير%20والخرائط" target="_blank" class="custom-card bg-white rounded-2xl border border-slate-100 p-5 flex justify-between items-center text-right font-bold text-slate-900 transition-all">
+                    <div class="flex items-center gap-4">
+                        <span class="icon-box w-12 h-12 rounded-xl bg-cyan-500 text-white flex items-center justify-center text-lg"><i class="fa-solid fa-map-location-dot"></i></span>
+                        <span class="text-sm md:text-base font-bold">تقارير وخرائط تخصصية</span>
                     </div>
-                </div>
+                    <i class="fa-solid fa-arrow-left text-xs text-slate-400 transition-transform"></i>
+                </a>
 
-                <div class="bg-white rounded-2xl border border-slate-100 card-shadow overflow-hidden transition-all">
-                    <button class="service-btn w-full p-5 flex justify-between items-center text-right font-bold text-slate-900 hover:bg-slate-50 cursor-pointer" data-target="serv5">
-                        <div class="flex items-center gap-3">
-                            <span class="w-10 h-10 rounded-xl bg-violet-600 text-white flex items-center justify-center text-base shadow-md shadow-indigo-100"><i class="fa-solid fa-display"></i></span>
-                            <span class="text-sm md:text-base">برزنتيشن وعروض بوربوينت</span>
-                        </div>
-                        <i class="chevron-icon fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
-                    </button>
-                    <div id="serv5" class="service-content hidden p-5 pt-0 border-t border-slate-50 bg-slate-50/50">
-                        <p class="text-xs text-slate-600 leading-relaxed mt-3">تصميم وصناعة عروض تقديمية (PowerPoint Presentations) خاطفة ومبهرة تعتمد على الأسلوب البصري الحديث، مع تنسيق الحركات والانتقالات التفاعلية الجاذبة والمناسبة للشرح الأكاديمي.</p>
-                        <a href="https://wa.me/967776280186?text=مرحباً،%20أريد%20طلب%20تصميم%20برزنتيشن%20احترافي" target="_blank" class="mt-4 w-full bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2 shadow-md shadow-emerald-100">
-                            <i class="fa-brands fa-whatsapp text-sm"></i> تواصل معنا واطلب الخدمة
-                        </a>
+                <a href="https://wa.me/967776280186?text=مرحباً،%20أريد%20طلب%20تصميم%20برزنتيشن%20احترافي" target="_blank" class="custom-card bg-white rounded-2xl border border-slate-100 p-5 flex justify-between items-center text-right font-bold text-slate-900 transition-all">
+                    <div class="flex items-center gap-4">
+                        <span class="icon-box w-12 h-12 rounded-xl bg-violet-600 text-white flex items-center justify-center text-lg"><i class="fa-solid fa-display"></i></span>
+                        <span class="text-sm md:text-base font-bold">برزنتيشن وعروض بوربوينت</span>
                     </div>
-                </div>
+                    <i class="fa-solid fa-arrow-left text-xs text-slate-400 transition-transform"></i>
+                </a>
 
-                <div class="bg-white rounded-2xl border border-slate-100 card-shadow overflow-hidden transition-all">
-                    <button class="service-btn w-full p-5 flex justify-between items-center text-right font-bold text-slate-900 hover:bg-slate-50 cursor-pointer" data-target="serv6">
-                        <div class="flex items-center gap-3">
-                            <span class="w-10 h-10 rounded-xl bg-indigo-900 text-white flex items-center justify-center text-base shadow-md shadow-slate-200"><i class="fa-solid fa-code"></i></span>
-                            <span class="text-sm md:text-base">مشاريع برمجية وتجهيز مواقع</span>
-                        </div>
-                        <i class="chevron-icon fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
-                    </button>
-                    <div id="serv6" class="service-content hidden p-5 pt-0 border-t border-slate-50 bg-slate-50/50">
-                        <p class="text-xs text-slate-600 leading-relaxed mt-3">بناء وتطوير المواقع الإلكترونية، تصميم واجهات وتطبيقات الهواتف الذكية (Figma / Web)، وحل المشاريع والتكاليف البرمجية بمختلف اللغات البرمجية (Python, Java, Databases) بكفاءة كاملة.</p>
-                        <a href="https://wa.me/967776280186?text=مرحباً،%20لدي%20مشروع%20برمجي%20/%20طلب%20تجهيز%20موقع" target="_blank" class="mt-4 w-full bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2 shadow-md shadow-emerald-100">
-                            <i class="fa-brands fa-whatsapp text-sm"></i> تواصل معنا واطلب الخدمة
-                        </a>
+                <a href="https://wa.me/967776280186?text=مرحباً،%20لدي%20مشروع%20برمجي%20/%20طلب%20تجهيز%20موقع" target="_blank" class="custom-card bg-white rounded-2xl border border-slate-100 p-5 flex justify-between items-center text-right font-bold text-slate-900 transition-all">
+                    <div class="flex items-center gap-4">
+                        <span class="icon-box w-12 h-12 rounded-xl bg-indigo-950 text-white flex items-center justify-center text-lg"><i class="fa-solid fa-code"></i></span>
+                        <span class="text-sm md:text-base font-bold">مشاريع برمجية وتجهيز مواقع</span>
                     </div>
-                </div>
+                    <i class="fa-solid fa-arrow-left text-xs text-slate-400 transition-transform"></i>
+                </a>
 
             </div>
         </section>
 
         <section id="features" class="mb-20 pt-8">
             <div class="text-center mb-12">
-                <h2 class="text-2xl md:text-3xl font-black text-slate-900 accent-border">مميزات منصة خدماتي</h2>
-                <p class="text-slate-500 text-sm mt-4">ما ننفرد بتقديمه لضمان تفوقكم وراحتكم الأكاديمية</p>
+                <h2 class="text-2xl md:text-3xl font-black text-slate-900 section-title">مميزات منصة خدماتي</h2>
             </div>
-
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white rounded-2xl p-6 text-center card-shadow border border-slate-50 flex flex-col items-center">
-                    <div class="w-14 h-14 bg-amber-50 rounded-2xl flex items-center justify-center text-2xl text-amber-600 shadow-sm mb-4"><i class="fa-solid fa-circle-check"></i></div>
+                <div class="feature-card bg-white rounded-2xl p-6 text-center border border-slate-100">
+                    <div class="w-14 h-14 bg-amber-50 rounded-2xl flex items-center justify-center text-2xl text-amber-600 mb-4 mx-auto"><i class="fa-solid fa-circle-check"></i></div>
                     <h3 class="text-base font-bold text-slate-900">جودة مضمونة</h3>
-                    <p class="text-xs text-slate-400 mt-2 leading-relaxed">أعمال مصاغة يدوياً ومراجعة لضمان الخلو التام من الأخطاء والسرقة العلمية.</p>
+                    <p class="text-xs text-slate-400 mt-2 leading-relaxed">أعمال مصاغة يدوياً ومراجعة لضمان الخلو من الأخطاء.</p>
                 </div>
-                <div class="bg-white rounded-2xl p-6 text-center card-shadow border border-slate-50 flex flex-col items-center">
-                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-2xl text-blue-600 shadow-sm mb-4"><i class="fa-solid fa-bolt"></i></div>
+                <div class="feature-card bg-white rounded-2xl p-6 text-center border border-slate-100">
+                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-2xl text-blue-600 mb-4 mx-auto"><i class="fa-solid fa-bolt"></i></div>
                     <h3 class="text-base font-bold text-slate-900">سرعة وإتقان</h3>
-                    <p class="text-xs text-slate-400 mt-2 leading-relaxed">نلتزم بتسليم الأعمال والمشاريع في المواعيد المحددة دون أي تأخير وبشغل زين.</p>
+                    <p class="text-xs text-slate-400 mt-2 leading-relaxed">نلتزم بتسليم الأعمال والمشاريع في المواعيد المحددة.</p>
                 </div>
-                <div class="bg-white rounded-2xl p-6 text-center card-shadow border border-slate-50 flex flex-col items-center">
-                    <div class="w-14 h-14 bg-indigo-50 rounded-2xl flex items-center justify-center text-2xl text-indigo-600 shadow-sm mb-4"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                <div class="feature-card bg-white rounded-2xl p-6 text-center border border-slate-100">
+                    <div class="w-14 h-14 bg-indigo-50 rounded-2xl flex items-center justify-center text-2xl text-indigo-600 mb-4 mx-auto"><i class="fa-solid fa-clock-rotate-left"></i></div>
                     <h3 class="text-base font-bold text-slate-900">تعديل مرن</h3>
-                    <p class="text-xs text-slate-400 mt-2 leading-relaxed">نتابع معكم حتى بعد التسليم ومستعدون لإجراء التعديلات المطلوبة بكل رحابة صدر.</p>
+                    <p class="text-xs text-slate-400 mt-2 leading-relaxed">نتابع معكم حتى بعد التسليم لإجراء أي تعديل مطلوب.</p>
                 </div>
-                <div class="bg-white rounded-2xl p-6 text-center card-shadow border border-slate-50 flex flex-col items-center">
-                    <div class="w-14 h-14 bg-purple-50 rounded-2xl flex items-center justify-center text-2xl text-purple-600 shadow-sm mb-4"><i class="fa-solid fa-headset"></i></div>
+                <div class="feature-card bg-white rounded-2xl p-6 text-center border border-slate-100">
+                    <div class="w-14 h-14 bg-purple-50 rounded-2xl flex items-center justify-center text-2xl text-purple-600 mb-4 mx-auto"><i class="fa-solid fa-headset"></i></div>
                     <h3 class="text-base font-bold text-slate-900">دعم مستمر</h3>
-                    <p class="text-xs text-slate-400 mt-2 leading-relaxed">متواجدون على مدار الساعة للإجابة على استفساراتكم ومناقشة تفاصيل مشاريعكم.</p>
+                    <p class="text-xs text-slate-400 mt-2 leading-relaxed">متواجدون على مدار الساعة للإجابة على استفساراتكم.</p>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="mb-20 bg-slate-50/60 rounded-3xl p-8 md:p-12 border border-slate-100/80 pt-8">
+        <section id="about" class="mb-20 bg-slate-100/50 rounded-3xl p-8 md:p-12 border border-slate-200/60 pt-8">
             <div class="text-center mb-12">
-                <h2 class="text-2xl md:text-3xl font-black text-slate-900 accent-border">رؤيتنا ورسالتنا وأهدافنا</h2>
-                <p class="text-slate-500 text-sm mt-4">المبادئ والركائز الثابتة التي نلتزم بها لخدمتكم وتطوير أعمالكم</p>
+                <h2 class="text-2xl md:text-3xl font-black text-slate-900 section-title">رؤيتنا ورسالتنا وأهدافنا</h2>
             </div>
-
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white rounded-2xl p-6 card-shadow bo
+                <div class="bg-white rounded-2xl p-6 border border-slate-100 text-center flex flex-col items-center gap-3">
+                    <div class="w-12 h-12 bg-blue-600 text-white text-xl rounded-xl flex items-center justify-center shadow-md"><i class="fa-solid fa-eye"></i></div>
+                    <h3 class="text-base font-black text-indigo-950">الرؤية</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">أن نكون المنصة الخدمية الرائدة والأولى اختياراً للطلاب والباحثين في الوطن العربي.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 border border-slate-100 text-center flex flex-col items-center gap-3">
+                    <div class="w-12 h-12 bg-amber-600 text-white text-xl rounded-xl flex items-center justify-center shadow-md"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h3 class="text-base font-black text-amber-950">الرسالة</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">تقديم دعم أكاديمي وتقني متميز للأفراد والطلاب من خلال صياغة وتنفيذ مشاريع عالية الجودة.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 border border-slate-100 flex flex-col items-center gap-3">
+                    <div class="w-12 h-12 bg-purple-600 text-white text-xl rounded-xl flex items-center justify-center shadow-md"><i class="fa-solid fa-bullseye"></i></div>
+                    <h3 class="text-base font-black text-purple-950 text-center">الأهداف</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed text-right w-full">
+                        • توفير حلول برمجية وأكاديمية دقيقة وخالية من العيوب.<br>
+                        • كسب ثقة وموثوقية دائمة مع عملائنا عبر الالتزام بالمواعيد.<br>
+                        • تسهيل الوصول للخدمات الطلابية والتصميمية بمرونة تامة وبأسعار مناسبة.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-100 py-8 text-center text-xs text-slate-400">
+        <p>© 2026 جميع الحقوق محفوظة لـ منصة خدماتي.</p>
+    </footer>
+
+    <a href="https://wa.me/967776280186" target="_blank" class="whatsapp-floating-btn fixed bottom-6 left-6 bg-emerald-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:bg-emerald-600 transition-all z-40 text-2xl active:scale-90">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
