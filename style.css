@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght=400;500;700;900&display=swap');
+
+body {
+    font-family: 'Tajawal', sans-serif;
+}
+
+/* ستايل الهيدر اللطيف */
+.main-header {
+    background-color: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(8px);
+}
+
+/* تدرج هيرو كحلي مريح للعين */
+.hero-section {
+    background: linear-gradient(180deg, #1e3a8a 0%, #0f172a 100%);
+}
+
+/* تصميم الكروت المطابق تماماً للصور (أبيض ناصع، حواف ناعمة، ظلال خفيفة جدًا) */
+.custom-card {
+    box-shadow: 0 4px 18px -2px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+}
+
+.custom-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.08);
+}
+
+.custom-card:hover .fa-arrow-left {
+    transform: translateX(-4px);
+    color: #1e3a8a;
+}
+
+/* مربعات الأيقونات داخل الكروت */
+.icon-box {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* تصميم كروت المميزات */
+.feature-card {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
+}
+
+/* خط تزيين العناوين */
+.section-title {
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+    background: #1e3a8a;
+    border-radius: 2px;
+}
+
+.whatsapp-floating-btn {
+    transition: all 0.2s ease;
+}
