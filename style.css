@@ -1,53 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght=400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap');
 
 body {
     font-family: 'Tajawal', sans-serif;
 }
 
-/* ستايل الهيدر اللطيف */
+/* هيدر ناعم وثابت */
 .main-header {
     background-color: rgba(255, 255, 255, 0.96);
     backdrop-filter: blur(8px);
 }
 
-/* تدرج هيرو كحلي مريح للعين */
+/* هيرو كحلي مميز */
 .hero-section {
     background: linear-gradient(180deg, #1e3a8a 0%, #0f172a 100%);
 }
 
-/* تصميم الكروت المطابق تماماً للصور (أبيض ناصع، حواف ناعمة، ظلال خفيفة جدًا) */
+/* كروت الخدمات - تأثيير حركي ثلاثي الأبعاد خفيف عند تمرير الماوس */
 .custom-card {
     box-shadow: 0 4px 18px -2px rgba(0, 0, 0, 0.04);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     text-decoration: none;
 }
 
 .custom-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.08);
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 16px 32px -4px rgba(30, 58, 138, 0.1);
+    border-color: #3b82f6;
 }
 
+/* حركة السهم الصغير داخل الكرت عند مرور الماوس */
 .custom-card:hover .fa-arrow-left {
-    transform: translateX(-4px);
+    transform: translateX(-6px);
     color: #1e3a8a;
 }
 
-/* مربعات الأيقونات داخل الكروت */
-.icon-box {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-/* تصميم كروت المميزات */
+/* حركة ذبذبة لطيفة لأيقونات كروت المزايا عند مرور الماوس فوق الكرت */
 .feature-card {
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s ease;
+}
+.feature-card:hover {
+    transform: translateY(-4px);
+    background-color: #fafafa;
+}
+.feature-card:hover .icon-bounce {
+    animation: bounceEffect 0.5s ease infinite alternate;
 }
 
-/* خط تزيين العناوين */
+@keyframes bounceEffect {
+    from { transform: translateY(0); }
+    to { transform: translateY(-5px); }
+}
+
+/* خط تزيين العناوين الرئيسي */
 .section-title {
     position: relative;
     display: inline-block;
 }
-
 .section-title::after {
     content: '';
     position: absolute;
@@ -60,6 +69,18 @@ body {
     border-radius: 2px;
 }
 
-.whatsapp-floating-btn {
-    transition: all 0.2s ease;
+/* أنيميشن نبض ذكي لزر الواتساب العائم يلفت الانتباه */
+.pulse-animation {
+    animation: shadowPulse 2s infinite;
+}
+@keyframes shadowPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(16, 185, 129, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+    }
 }
