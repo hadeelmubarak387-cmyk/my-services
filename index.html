@@ -1,226 +1,159 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>منصة خدماتي الاحترافية | أبحاث، مشاريع تخرج، برمجة وتصاميم</title>
-    <meta name="description" content="منصة خدماتي تقدم أفضل الخدمات الأكاديمية والتقنية المتميزة بشغل مرتب وزين.">
-    <meta name="keywords" content="أبحاث علمية, واجبات وتكاليف, مشاريع تخرج, تقارير, خرائط, برزنتيشن احترافي">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://771523543.github.io/my-services/">
-    <meta name="google-site-verification" content="8XB0L22b9ZJ3VLFcZQecFIAjCF7AKHeV0z9W90i1zow" />
-    
-    <!-- استدعاء الأيقونات والتنسيقات المدعومة -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- مكتبة AOS لتأثيرات الحركة عند التمرير -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <!-- ربط ملف الستايل الخارجي -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>منصة خدماتي</title>
+  <style>
+    body {
+      font-family: 'Tahoma', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #3a7bd5, #6a11cb);
+      color: #333;
+    }
+    header {
+      background: rgba(255,255,255,0.9);
+      padding: 15px;
+      text-align: right;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    header .menu {
+      font-size: 18px;
+      animation: pulse 2s infinite;
+    }
+    .stats {
+      text-align: center;
+      color: white;
+      padding: 40px 20px;
+    }
+    .stats h1 {
+      font-size: 48px;
+      margin: 0;
+      animation: bounce 3s infinite;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #6a11cb;
+      animation: pulse 2s infinite;
+    }
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: #3a7bd5;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      animation: bounce 2s infinite;
+    }
+    .features, .vision {
+      background: rgba(255,255,255,0.9);
+      margin: 20px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .features h2, .vision h2 {
+      color: #3a7bd5;
+      animation: pulse 2s infinite;
+    }
+
+    /* Animations */
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+  </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden">
+<body>
 
-    <!-- الشريط العلوي (الهيدر) -->
-    <header class="main-header sticky top-0 z-50 bg-white border-b border-slate-100 py-4 px-4 shadow-sm">
-        <div class="max-w-5xl mx-auto flex justify-between items-center">
-            
-            <!-- زر الـ 3 خطوط باليمين -->
-            <button id="menuBtn" class="toggle-menu-btn w-10 h-10 flex items-center justify-center bg-slate-100 text-indigo-950 rounded-xl transition-all cursor-pointer">
-                <i class="fa-solid fa-bars text-xl"></i>
-            </button>
+<header>
+  <div class="menu">⋮ الخدمات | الرؤية | الرسالة | الهدف</div>
+</header>
 
-            <!-- الشعار باليسار -->
-            <div class="flex items-center gap-3">
-                <div class="flex flex-col text-right">
-                    <span class="text-lg font-black tracking-tight text-indigo-950 leading-tight">منصة خدماتي</span>
-                </div>
-                <div class="brand-logo w-9 h-9 bg-gradient-to-br from-blue-700 to-indigo-950 rounded-xl flex items-center justify-center text-white shadow-md">
-                    <i class="fa-solid fa-graduation-cap text-base"></i>
-                </div>
-            </div>
-        </div>
-    </header>
+<section class="stats">
+  <h1>+5000 طالب</h1>
+  <p>+1200 مشروع منجز | 98% رضا العملاء</p>
+</section>
 
-    <!-- القائمة الجانبية المنسدلة -->
-    <div id="sideMenu" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden">
-        <div class="w-72 bg-white h-full p-6 shadow-2xl flex flex-col justify-between">
-            <div>
-                <div class="flex justify-between items-center pb-6 border-b border-slate-100">
-                    <span class="font-black text-indigo-950 text-base">انتقال سريع</span>
-                    <button id="closeMenuBtn" class="w-8 h-8 flex items-center justify-center bg-slate-50 text-slate-400 rounded-lg hover:bg-rose-50 hover:text-rose-600 cursor-pointer">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
-                </div>
-                <nav class="flex flex-col gap-2 mt-6">
-                    <a href="#hero" class="menu-link flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 hover:bg-slate-50 hover:text-indigo-950 font-medium text-sm transition-all"><i class="fa-solid fa-house text-slate-400"></i> الواجهة الرئيسية</a>
-                    <a href="#services" class="menu-link flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 hover:bg-slate-50 hover:text-indigo-950 font-medium text-sm transition-all"><i class="fa-solid fa-layer-group text-slate-400"></i> خدماتنا المتاحة</a>
-                    <a href="#features" class="menu-link flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 hover:bg-slate-50 hover:text-indigo-950 font-medium text-sm transition-all"><i class="fa-solid fa-star text-slate-400"></i> مميزات المنصة</a>
-                    <a href="#about" class="menu-link flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 hover:bg-slate-50 hover:text-indigo-950 font-medium text-sm transition-all"><i class="fa-solid fa-bullseye text-slate-400"></i> الرؤية والرسالة والأهداف</a>
-                </nav>
-            </div>
-            <div class="pt-6 border-t border-slate-100 text-center">
-                <p class="text-[11px] text-slate-400 font-bold">منصة خدماتي © 2026</p>
-            </div>
-        </div>
-    </div>
+<section class="services">
+  <div class="card">
+    <h3>عمل الواجبات</h3>
+    <p>حل التكاليف والأنشطة الدراسية باحترافية.</p>
+    <a href="https://wa.me/967776280186">تواصل واتساب</a>
+  </div>
+  <div class="card">
+    <h3>الأبحاث والمشاريع</h3>
+    <p>إعداد أبحاث، مشاريع، وخرائط ذهنية.</p>
+    <a href="https://wa.me/967776280186">تواصل واتساب</a>
+  </div>
+  <div class="card">
+    <h3>كتابة التقارير</h3>
+    <p>تقارير، مقالات، تعابير، وترجمة.</p>
+    <a href="https://wa.me/967776280186">تواصل واتساب</a>
+  </div>
+  <div class="card">
+    <h3>تصاميم وبرزنتيشن</h3>
+    <p>باوربوينت وجرافيك احترافي.</p>
+    <a href="https://wa.me/967776280186">تواصل واتساب</a>
+  </div>
+  <div class="card">
+    <h3>صياغة CV</h3>
+    <p>سيرة ذاتية احترافية.</p>
+    <a href="https://wa.me/967776280186">تواصل واتساب</a>
+  </div>
+  <div class="card">
+    <h3>حل الكريكتال والديسكشن</h3>
+    <p>حل مسائل IQ ومناقشات.</p>
+    <a href="https://wa.me/967776280186">تواصل واتساب</a>
+  </div>
+  <div class="card">
+    <h3>ترجمة وتلخيص</h3>
+    <p>تلخيص الكتب والمحاضرات.</p>
+    <a href="https://wa.me/967776280186">تواصل واتساب</a>
+  </div>
+</section>
 
-    <!-- واجهة المنصة الرئيسية مع حركة ظهور من الأعلى وتكبير ناعم -->
-    <section id="hero" class="hero-section text-white pt-16 pb-24 px-4 rounded-b-[2.5rem] text-center relative shadow-lg overflow-hidden">
-        <div class="relative z-10 max-w-3xl mx-auto" data-aos="zoom-in" data-aos-duration="1000">
-            <div class="inline-flex items-center gap-2 bg-white/10 px-4 py-1.5 rounded-full border border-white/20 mb-6">
-                <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
-                <span class="text-xs font-medium text-slate-200">منصة التعليم الرقمي والأعمال الاحترافية</span>
-            </div>
-            <h1 class="text-3xl md:text-5xl font-black leading-tight mb-6">منصة خدماتي الشاملة للأبحاث والبرمجة والتصميم</h1>
-            <p class="text-slate-300 max-w-xl mx-auto text-sm md:text-base leading-relaxed">ننجز أعمالكم بدقة متناهية، وبإشراف متخصصين لضمان أعلى درجات التميز والاحترافية.</p>
-        </div>
-    </section>
+<section class="features">
+  <h2>مميزات منصة خدماتي</h2>
+  <ul>
+    <li>هوية بصرية خليجية راقية</li>
+    <li>سهولة الاستخدام</li>
+    <li>تنوع الخدمات الأكاديمية</li>
+    <li>موثوقية عالية مدعومة بالأرقام</li>
+    <li>تواصل مباشر عبر واتساب</li>
+  </ul>
+</section>
 
-    <!-- المحتوى الرئيسي -->
-    <main class="max-w-5xl mx-auto px-4 relative z-20 -mt-12">
-        
-        <!-- قسم الخدمات المتاحة -->
-        <section id="services" class="mb-20 pt-8">
-            <div class="text-center mb-12" data-aos="fade-up">
-                <h2 class="text-2xl md:text-3xl font-black text-slate-900 section-title">دليل الخدمات المتاحة</h2>
-                <p class="text-slate-500 text-sm mt-4">اضغط على أي خدمة للانتقال مباشرة إلى الواتساب وطلب الخدمة</p>
-            </div>
+<section class="vision">
+  <h2>الرؤية</h2>
+  <p>أن تكون منصة خدماتي الخيار الأول للطلاب العرب.</p>
+  <h2>الرسالة</h2>
+  <p>تقديم خدمات تعليمية وإبداعية عالية الجودة بسرعة واحترافية.</p>
+  <h2>الهدف</h2>
+  <p>تمكين الطلاب من التفوق عبر حلول مبتكرة وموثوقة.</p>
+</section>
 
-            <!-- شبكة الكروت: كل كرت يتحرك ويظهر بترتيب تتابعي ناعم (Delay) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                
-                <!-- كرت 1 -->
-                <a href="https://wa.me/967776280186?text=مرحباً،%20أريد%20طلب%20خدمة%20إعداد%20الأبحاث%20العلمية" target="_blank" class="custom-card bg-white rounded-2xl border border-slate-100 p-5 flex justify-between items-center text-right font-bold text-slate-900 transition-all" data-aos="fade-up" data-aos-delay="100">
-                    <div class="flex items-center gap-4">
-                        <span class="icon-box w-12 h-12 rounded-xl bg-amber-500 text-white flex items-center justify-center text-lg"><i class="fa-solid fa-book-bookmark"></i></span>
-                        <span class="text-sm md:text-base font-bold">أبحاث علمية وأكاديمية</span>
-                    </div>
-                    <i class="fa-solid fa-arrow-left text-xs text-slate-400 transition-transform"></i>
-                </a>
-
-                <!-- كرت 2 -->
-                <a href="https://wa.me/967776280186?text=مرحباً،%20أريد%20طلب%20مساعدة%20في%20حل%20الواجبات%20والتكاليف" target="_blank" class="custom-card bg-white rounded-2xl border border-slate-100 p-5 flex justify-between items-center text-right font-bold text-slate-900 transition-all" data-aos="fade-up" data-aos-delay="200">
-                    <div class="flex items-center gap-4">
-                        <span class="icon-box w-12 h-12 rounded-xl bg-emerald-500 text-white flex items-center justify-center text-lg"><i class="fa-solid fa-file-pen"></i></span>
-                        <span class="text-sm md:text-base font-bold">حلول الواجبات والتكاليف (TMA)</span>
-                    </div>
-                    <i class="fa-solid fa-arrow-left text-xs text-slate-400 transition-transform"></i>
-                </a>
-
-                <!-- كرت 3 -->
-                <a href="https://wa.me/967776280186?text=مرحباً،%20أود%20الاستفسار%20وطلب%20خدمة%20مشاريع%20التخرج" target="_blank" class="custom-card bg-white rounded-2xl border border-slate-100 p-5 flex justify-between items-center text-right font-bold text-slate-900 transition-all" data-aos="fade-up" data-aos-delay="300">
-                    <div class="flex items-center gap-4">
-                        <span class="icon-box w-12 h-12 rounded-xl bg-blue-500 text-white flex items-center justify-center text-lg"><i class="fa-solid fa-user-graduate"></i></span>
-                        <span class="text-sm md:text-base font-bold">مشاريع تخرج متكاملة</span>
-                    </div>
-                    <i class="fa-solid fa-arrow-left text-xs text-slate-400 transition-transform"></i>
-                </a>
-
-                <!-- كرت 4 -->
-                <a href="https://wa.me/967776280186?text=مرحباً،%20أريد%20طلب%20خدمة%20إعداد%20التقارير%20والخرائط" target="_blank" class="custom-card bg-white rounded-2xl border border-slate-100 p-5 flex justify-between items-center text-right font-bold text-slate-900 transition-all" data-aos="fade-up" data-aos-delay="400">
-                    <div class="flex items-center gap-4">
-                        <span class="icon-box w-12 h-12 rounded-xl bg-cyan-500 text-white flex items-center justify-center text-lg"><i class="fa-solid fa-map-location-dot"></i></span>
-                        <span class="text-sm md:text-base font-bold">تقارير وخرائط تخصصية</span>
-                    </div>
-                    <i class="fa-solid fa-arrow-left text-xs text-slate-400 transition-transform"></i>
-                </a>
-
-                <!-- كرت 5 -->
-                <a href="https://wa.me/967776280186?text=مرحباً،%20أريد%20طلب%20تصميم%20برزنتيشن%20احترافي" target="_blank" class="custom-card bg-white rounded-2xl border border-slate-100 p-5 flex justify-between items-center text-right font-bold text-slate-900 transition-all" data-aos="fade-up" data-aos-delay="500">
-                    <div class="flex items-center gap-4">
-                        <span class="icon-box w-12 h-12 rounded-xl bg-violet-600 text-white flex items-center justify-center text-lg"><i class="fa-solid fa-display"></i></span>
-                        <span class="text-sm md:text-base font-bold">برزنتيشن وعروض بوربوينت</span>
-                    </div>
-                    <i class="fa-solid fa-arrow-left text-xs text-slate-400 transition-transform"></i>
-                </a>
-
-                <!-- كرت 6 -->
-                <a href="https://wa.me/967776280186?text=مرحباً،%20لدي%20مشروع%20برمجي%20/%20طلب%20تجهيز%20موقع" target="_blank" class="custom-card bg-white rounded-2xl border border-slate-100 p-5 flex justify-between items-center text-right font-bold text-slate-900 transition-all" data-aos="fade-up" data-aos-delay="600">
-                    <div class="flex items-center gap-4">
-                        <span class="icon-box w-12 h-12 rounded-xl bg-indigo-950 text-white flex items-center justify-center text-lg"><i class="fa-solid fa-code"></i></span>
-                        <span class="text-sm md:text-base font-bold">مشاريع برمجية وتجهيز مواقع</span>
-                    </div>
-                    <i class="fa-solid fa-arrow-left text-xs text-slate-400 transition-transform"></i>
-                </a>
-
-            </div>
-        </section>
-
-        <!-- قسم المميزات مع حركة ظهور جانبي تتابعي -->
-        <section id="features" class="mb-20 pt-8">
-            <div class="text-center mb-12" data-aos="fade-up">
-                <h2 class="text-2xl md:text-3xl font-black text-slate-900 section-title">مميزات منصة خدماتي</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="feature-card bg-white rounded-2xl p-6 text-center border border-slate-100" data-aos="fade-left" data-aos-delay="100">
-                    <div class="w-14 h-14 bg-amber-50 rounded-2xl flex items-center justify-center text-2xl text-amber-600 mb-4 mx-auto icon-bounce"><i class="fa-solid fa-circle-check"></i></div>
-                    <h3 class="text-base font-bold text-slate-900">جودة مضمونة</h3>
-                    <p class="text-xs text-slate-400 mt-2 leading-relaxed">أعمال مصاغة يدوياً ومراجعة لضمان الخلو من الأخط.</p>
-                </div>
-                <div class="feature-card bg-white rounded-2xl p-6 text-center border border-slate-100" data-aos="fade-left" data-aos-delay="200">
-                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-2xl text-blue-600 mb-4 mx-auto icon-bounce"><i class="fa-solid fa-bolt"></i></div>
-                    <h3 class="text-base font-bold text-slate-900">سرعة وإتقان</h3>
-                    <p class="text-xs text-slate-400 mt-2 leading-relaxed">نلتزم بتسليم الأعمال والمشاريع في المواعيد المحددة.</p>
-                </div>
-                <div class="feature-card bg-white rounded-2xl p-6 text-center border border-slate-100" data-aos="fade-left" data-aos-delay="300">
-                    <div class="w-14 h-14 bg-indigo-50 rounded-2xl flex items-center justify-center text-2xl text-indigo-600 mb-4 mx-auto icon-bounce"><i class="fa-solid fa-clock-rotate-left"></i></div>
-                    <h3 class="text-base font-bold text-slate-900">تعديل مرن</h3>
-                    <p class="text-xs text-slate-400 mt-2 leading-relaxed">نتابع معكم حتى بعد التسليم لإجراء أي تعديل مطلوب.</p>
-                </div>
-                <div class="feature-card bg-white rounded-2xl p-6 text-center border border-slate-100" data-aos="fade-left" data-aos-delay="400">
-                    <div class="w-14 h-14 bg-purple-50 rounded-2xl flex items-center justify-center text-2xl text-purple-600 mb-4 mx-auto icon-bounce"><i class="fa-solid fa-headset"></i></div>
-                    <h3 class="text-base font-bold text-slate-900">دعم مستمر</h3>
-                    <p class="text-xs text-slate-400 mt-2 leading-relaxed">متواجدون على مدار الساعة للإجابة على استفساراتكم.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- قسم الرؤية والرسالة والأهداف مع حركة زووم هادئة -->
-        <section id="about" class="mb-20 bg-slate-100/50 rounded-3xl p-8 md:p-12 border border-slate-200/60 pt-8" data-aos="zoom-in-up">
-            <div class="text-center mb-12">
-                <h2 class="text-2xl md:text-3xl font-black text-slate-900 section-title">رؤيتنا ورسالتنا وأهدافنا</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white rounded-2xl p-6 border border-slate-100 text-center flex flex-col items-center gap-3">
-                    <div class="w-12 h-12 bg-blue-600 text-white text-xl rounded-xl flex items-center justify-center shadow-md"><i class="fa-solid fa-eye"></i></div>
-                    <h3 class="text-base font-black text-indigo-950">الرؤية</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">أن نكون المنصة الخدمية الرائدة والأولى اختياراً للطلاب والباحثين في الوطن العربي.</p>
-                </div>
-                <div class="bg-white rounded-2xl p-6 border border-slate-100 text-center flex flex-col items-center gap-3">
-                    <div class="w-12 h-12 bg-amber-600 text-white text-xl rounded-xl flex items-center justify-center shadow-md"><i class="fa-solid fa-graduation-cap"></i></div>
-                    <h3 class="text-base font-black text-amber-950">الرسالة</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">تقديم دعم أكاديمي وتقني متميز للأفراد والطلاب من خلال صياغة وتنفيذ مشاريع عالية الجودة.</p>
-                </div>
-                <div class="bg-white rounded-2xl p-6 border border-slate-100 flex flex-col items-center gap-3">
-                    <div class="w-12 h-12 bg-purple-600 text-white text-xl rounded-xl flex items-center justify-center shadow-md"><i class="fa-solid fa-bullseye"></i></div>
-                    <h3 class="text-base font-black text-purple-950 text-center">الأهداف</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed text-right w-full">
-                        • توفير حلول برمجية وأكاديمية دقيقة وخالية من العيوب.<br>
-                        • كسب ثقة وموثوقية دائمة مع عملائنا عبر الالتزام بالمواعيد.<br>
-                        • تسهيل الوصول للخدمات الطلابية والتصميمية بمرونة تامة وبأسعار مناسبة.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- فوتر الصفحة -->
-    <footer class="bg-white border-t border-slate-100 py-8 text-center text-xs text-slate-400">
-        <p>© 2026 جميع الحقوق محفوظة لـ منصة خدماتي.</p>
-    </footer>
-
-    <!-- زر واتساب العائم المتذبذب لجذب الانتباه -->
-    <a href="https://wa.me/967776280186" target="_blank" class="whatsapp-floating-btn fixed bottom-6 left-6 bg-emerald-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:bg-emerald-600 transition-all z-40 text-2xl active:scale-90 pulse-animation">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
-
-    <!-- سكربت مكتبة الحركات AOS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- ربط ملف الـ JavaScript الخاص بك -->
-    <script src="script.js"></script>
 </body>
 </html>
