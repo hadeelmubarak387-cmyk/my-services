@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260708-23-e6699ff"}');</script><script src="/_sdk/f432b76fb310b513.telemetry_sdk.js" integrity="sha512-9FJQ55EKmmqhyyik8BhrMVfm0+iYYfb8uOlRsjtkxJMEI97qOVEI4PnHohDjQAtvAep0IOEpdQ64eki0sz62ug=="></script>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>منصة خدماتي للخدمات الطلابية - بحوث عالية الجودة وخدمات أكاديمية متميزة</title>
-    <meta name="description" content="منصة خدماتي للخدمات الطلابية تقدم بحوث عالية الجودة، عروض احترافية، واجبات دراسية، تقارير علمية، ومشاريع تخرج. خدمة عملاء 24 ساعة - الرياض، السعودية">
-    <meta name="keywords" content="منصة خدماتي, خدمات طلابية, بحوث جامعية, واجبات دراسية, تقارير علمية, مشاريع تخرج, الرياض, السعودية">
+    <meta name="description" content="منصة خدماتي للخدمات الطلابية تقدم بحوث عالية الجودة، عروض احترافية، واجبات دراسية، تقارير علمية، ومشاريع تخرج. خدمة عملاء 24 ساعة.">
+    <meta name="keywords" content="منصة خدماتي, خدمات طلابية, بحوث جامعية, واجبات دراسية, تقارير علمية, مشاريع تخرج">
     <meta name="author" content="منصة خدماتي للخدمات الطلابية">
     <meta property="og:title" content="منصة خدماتي للخدمات الطلابية">
     <meta property="og:description" content="خدمات أكاديمية متميزة وبحوث عالية الجودة">
     <meta property="og:type" content="website">
-    <link rel="canonical" href="https://khadamati-platform.com">
+    
+    <!-- استدعاء مكتبة Tailwind CSS للتصميم -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -25,34 +26,36 @@
             }
         }
     </script>
+
+    <!-- خط كايرو المتناسق مع التصاميم الحديثة -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
     <style>
         body {
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        .gradient-bg {
-            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 30%, #ec4899 70%, #f59e0b 100%);
+            font-family: 'Cairo', sans-serif;
+            scroll-behavior: smooth;
         }
         .service-card {
             transition: all 0.4s ease;
-            backdrop-filter: blur(10px);
         }
         .service-card:hover {
             transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 25px 50px -12px rgba(236, 72, 153, 0.2);
         }
         .icon-circle {
-            width: 80px;
-            height: 80px;
+            width: 70px;
+            height: 70px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 1.5rem auto;
-            border-radius: 50%;
+            border-radius: 20px;
             font-size: 2rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
             color: white;
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
         }
         .whatsapp-btn {
             animation: pulse 2s infinite;
@@ -63,8 +66,8 @@
         }
         .floating-whatsapp {
             position: fixed;
-            bottom: 20px;
-            left: 20px;
+            bottom: 30px;
+            left: 30px;
             z-index: 1000;
             animation: bounce 2s infinite;
         }
@@ -73,204 +76,211 @@
             40% { transform: translateY(-10px); }
             60% { transform: translateY(-5px); }
         }
-        .hero-pattern {
-            background-image: radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 0%, transparent 50%),
-                              radial-gradient(circle at 75% 75%, rgba(255,255,255,0.1) 0%, transparent 50%);
-        }
-        .card-glass {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
     </style>
 </head>
-<body class="bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-100">
-    <!-- Header -->
-    <header class="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white shadow-2xl">
-        <nav class="container mx-auto px-4 py-6">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-4 space-x-reverse">
-                    <div class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white rounded-full p-4 shadow-xl">
-                        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
+<body class="bg-indigo-950 text-white antialiased">
+
+    <!-- ========================================== -->
+    <!-- الهيدر وشريط التنقل (Header & Navigation) -->
+    <!-- ========================================== -->
+    <header class="w-full z-50 fixed top-0 left-0 border-b border-white/10 bg-indigo-950/80 backdrop-blur-md shadow-lg">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center max-w-6xl mx-auto">
+                <div class="flex items-center gap-4">
+                    <div class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white rounded-2xl p-3 shadow-xl">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
                         </svg>
                     </div>
                     <div>
-                        <h1 class="text-3xl font-bold text-yellow-300">منصة خدماتي</h1>
-                        <p class="text-pink-200 text-lg">للخدمات الطلابية</p>
+                        <h1 class="text-2xl font-black text-yellow-300 leading-tight">منصة خدماتي</h1>
+                        <p class="text-pink-400 text-sm font-bold">للخدمات الطلابية والأكاديمية</p>
                     </div>
                 </div>
                 <div class="hidden md:flex space-x-8 space-x-reverse">
-                    <a href="#services" class="hover:text-yellow-300 transition-colors text-lg font-medium text-pink-100">خدماتنا</a>
-                    <a href="#vision" class="hover:text-yellow-300 transition-colors text-lg font-medium text-pink-100">رؤيتنا وأهدافنا</a>
-                    <a href="#about" class="hover:text-yellow-300 transition-colors text-lg font-medium text-pink-100">من نحن</a>
-                    <a href="#contact" class="hover:text-yellow-300 transition-colors text-lg font-medium text-pink-100">تواصل معنا</a>
+                    <a href="#services" class="hover:text-yellow-300 transition-colors text-base font-bold text-gray-200">خدماتنا</a>
+                    <a href="#vision" class="hover:text-yellow-300 transition-colors text-base font-bold text-gray-200">رؤيتنا وأهدافنا</a>
+                    <a href="#about" class="hover:text-yellow-300 transition-colors text-base font-bold text-gray-200">لماذا نحن؟</a>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-indigo-800 via-purple-800 to-pink-800 hero-pattern text-white py-24">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-6xl font-bold mb-8 leading-tight text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-orange-300 to-pink-300">منصة خدماتي للخدمات الطلابية</h2>
-            <p class="text-2xl mb-12 max-w-3xl mx-auto leading-relaxed text-pink-100">نقدم خدمات أكاديمية متميزة وعروض احترافية لجميع المراحل الدراسية بأعلى معايير الجودة</p>
-            <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                <a href="https://wa.me/967776280186" target="_blank" rel="noopener noreferrer" class="whatsapp-btn bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-10 py-5 rounded-full text-xl font-bold transition-all shadow-2xl">
-                    📱 اطلب على الواتس الآن
-                </a>
-                <a href="#services" class="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-white px-10 py-5 rounded-full text-xl font-bold transition-all shadow-2xl">
-                    استكشف خدماتنا
-                </a>
+    <!-- ========================================== -->
+    <!-- 1. قسم الواجهة الرئيسية (Hero Section) -->
+    <!-- ========================================== -->
+    <section id="hero" class="relative min-h-screen pt-32 pb-20 bg-gradient-to-tr from-indigo-950 via-purple-900 to-indigo-900 text-white overflow-hidden flex items-center">
+        
+        <!-- الخلفية الجمالية الدائرية -->
+        <div class="absolute top-1/4 -right-20 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-1/4 -left-20 w-96 h-96 bg-yellow-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+                
+                <!-- النصوص والأزرار (الجانب الأيمن) -->
+                <div class="text-right space-y-8 order-2 lg:order-1">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-pink-500/30 text-pink-300 text-sm font-medium" style="background: rgba(255,255,255,0.03); backdrop-filter: blur(5px);">
+                        <span class="flex h-2 w-2 relative">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-pink-500"></span>
+                        </span>
+                        بوابتك الأكاديمية نحو التميز والنجاح
+                    </div>
+                    
+                    <h2 class="text-4xl md:text-6xl font-black leading-tight">
+                        منصة خدماتي تحوّل جهودك إلى <br>
+                        <span class="bg-gradient-to-r from-yellow-300 via-pink-400 to-purple-300 bg-clip-text text-transparent">إنجازات استثنائية</span>
+                    </h2>
+                    
+                    <p class="text-gray-300 text-lg md:text-xl leading-relaxed max-w-xl">
+                        نقدم خدمات أكاديمية متميزة وعروض احترافية لجميع المراحل الدراسية بأعلى معايير الجودة، من الأبحاث المتميزة ومشاريع التخرج وحتى الواجبات التي تضمن لك الصدارة.
+                    </p>
+                    
+                    <!-- الأزرار التفاعلية -->
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a href="https://wa.me/967776280186" target="_blank" rel="noopener noreferrer" class="whatsapp-btn px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 font-bold rounded-2xl shadow-lg shadow-emerald-500/20 transition-all transform hover:-translate-y-1 text-center min-w-[200px] flex items-center justify-center gap-2">
+                            📱 اطلب على الواتس الآن
+                        </a>
+                        <a href="#services" class="px-8 py-4 border border-white/20 hover:bg-white/10 font-bold rounded-2xl transition-all text-center min-w-[160px]" style="background: rgba(255,255,255,0.03); backdrop-filter: blur(5px);">
+                            استكشف خدماتنا
+                        </a>
+                    </div>
+
+                    <!-- إحصائيات سريعة -->
+                    <div class="grid grid-cols-3 gap-6 pt-10 border-t border-white/10 max-w-md">
+                        <div>
+                            <div class="text-3xl font-extrabold text-yellow-300">+500</div>
+                            <div class="text-sm text-gray-400 mt-1">طالب مستفيد</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-extrabold text-pink-400">%100</div>
+                            <div class="text-sm text-gray-400 mt-1">أمانة علمية</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-extrabold text-purple-300">24/7</div>
+                            <div class="text-sm text-gray-400 mt-1">دعم متواصل</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- الجانب الأيسر: العنصر الزجاجي الجمالي -->
+                <div class="order-1 lg:order-2 flex justify-center">
+                    <div class="relative p-6 rounded-[2.5rem] border border-white/10 shadow-2xl overflow-hidden max-w-md w-full" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px);">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-purple-500/10 to-pink-500/10 pointer-events-none"></div>
+                        
+                        <div class="w-full aspect-square bg-indigo-950/40 rounded-[2rem] flex flex-col items-center justify-center p-8 text-center space-y-6 border border-white/5">
+                            <div class="text-7xl animate-bounce duration-1000">🎓</div>
+                            <h3 class="text-2xl font-bold text-yellow-300">التميز الأكاديمي يبدأ من هنا</h3>
+                            <p class="text-gray-300 text-sm leading-relaxed">أبحاث خالية من الاقتباس، صياغة لغوية دقيقة، ومشاريع تضمن لك التميز أمام لجان التحكيم.</p>
+                            <div class="flex gap-2 text-xl bg-white/5 px-4 py-2 rounded-full border border-white/10">
+                                <span>📚</span> <span>💻</span> <span>📝</span> <span>📊</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-20">
-        <div class="container mx-auto px-4">
-            <h3 class="text-5xl font-bold text-center text-gray-800 mb-16">خدماتنا المتميزة</h3>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+    <!-- ========================================== -->
+    <!-- 2. قسم الخدمات المتميزة (Services) -->
+    <!-- ========================================== -->
+    <section id="services" class="py-24 relative bg-indigo-900/40">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center space-y-4 mb-16">
+                <h3 class="text-4xl md:text-5xl font-black text-white">خدماتنا المتميزة</h3>
+                <p class="text-gray-400 max-w-xl mx-auto">نلبي كافة احتياجاتك الأكاديمية تحت سقف واحد وباحترافية شديدة</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- خدمة 1 -->
-                <div class="service-card card-glass p-8 rounded-3xl text-center">
+                <div class="service-card border border-white/10 p-8 rounded-3xl text-center" style="background: rgba(255,255,255,0.03); backdrop-filter: blur(10px);">
                     <div class="icon-circle">📚</div>
-                    <h4 class="text-2xl font-bold text-gray-800 mb-4">البحوث العلمية</h4>
-                    <p class="text-gray-600 mb-6 text-lg">بحوث عالية الجودة معدة بأحدث المعايير الأكاديمية</p>
-                    <ul class="text-gray-600 space-y-3 mb-8 text-right">
-                        <li class="flex items-center justify-center">
-                            <span class="text-green-500 ml-2">✓</span>
-                            مراجع موثقة
-                        </li>
-                        <li class="flex items-center justify-center">
-                            <span class="text-green-500 ml-2">✓</span>
-                            خالية من الانتحال
-                        </li>
-                        <li class="flex items-center justify-center">
-                            <span class="text-green-500 ml-2">✓</span>
-                            تسليم في الوقت المحدد
-                        </li>
+                    <h4 class="text-2xl font-bold text-yellow-300 mb-4">البحوث العلمية</h4>
+                    <p class="text-gray-300 mb-6 text-base">بحوث عالية الجودة معدة بأحدث المعايير الأكاديمية</p>
+                    <ul class="text-gray-300 space-y-3 mb-8 text-right inline-block">
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> مراجع موثقة وموثوقة</li>
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> خالية تماماً من الانتحال</li>
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> تسليم دقيق في الوقت المحدد</li>
                     </ul>
-                    <a href="https://wa.me/967776280186?text=مرحباً، أريد طلب خدمة البحوث العلمية" target="_blank" rel="noopener noreferrer" class="block w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white text-center py-4 px-6 rounded-2xl font-bold transition-all shadow-lg">
+                    <a href="https://wa.me/967776280186?text=مرحباً، أريد طلب خدمة البحوث العلمية" target="_blank" rel="noopener noreferrer" class="block w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white text-center py-4 px-6 rounded-2xl font-bold transition-all shadow-lg">
                         اطلب مباشرة عبر الواتساب
                     </a>
                 </div>
 
                 <!-- خدمة 2 -->
-                <div class="service-card card-glass p-8 rounded-3xl text-center">
+                <div class="service-card border border-white/10 p-8 rounded-3xl text-center" style="background: rgba(255,255,255,0.03); backdrop-filter: blur(10px);">
                     <div class="icon-circle">📝</div>
-                    <h4 class="text-2xl font-bold text-gray-800 mb-4">الواجبات الدراسية</h4>
-                    <p class="text-gray-600 mb-6 text-lg">حلول شاملة لجميع الواجبات والتكليفات الجامعية</p>
-                    <ul class="text-gray-600 space-y-3 mb-8 text-right">
-                        <li class="flex items-center justify-center">
-                            <span class="text-green-500 ml-2">✓</span>
-                            جميع التخصصات
-                        </li>
-                        <li class="flex items-center justify-center">
-                            <span class="text-green-500 ml-2">✓</span>
-                            حلول نموذجية
-                        </li>
-                        <li class="flex items-center justify-center">
-                            <span class="text-green-500 ml-2">✓</span>
-                            أسعار مناسبة
-                        </li>
+                    <h4 class="text-2xl font-bold text-yellow-300 mb-4">الواجبات الدراسية</h4>
+                    <p class="text-gray-300 mb-6 text-base">حلول شاملة لجميع الواجبات والتكليفات الجامعية</p>
+                    <ul class="text-gray-300 space-y-3 mb-8 text-right inline-block">
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> تغطية شاملة لجميع التخصصات</li>
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> حلول نموذجية دقيقة</li>
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> أسعار ملائمة ومناسبة للطلاب</li>
                     </ul>
-                    <a href="https://wa.me/967776280186?text=مرحباً، أريد طلب خدمة الواجبات الدراسية" target="_blank" rel="noopener noreferrer" class="block w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white text-center py-4 px-6 rounded-2xl font-bold transition-all shadow-lg">
+                    <a href="https://wa.me/967776280186?text=مرحباً، أريد طلب خدمة الواجبات الدراسية" target="_blank" rel="noopener noreferrer" class="block w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white text-center py-4 px-6 rounded-2xl font-bold transition-all shadow-lg">
                         اطلب مباشرة عبر الواتساب
                     </a>
                 </div>
 
                 <!-- خدمة 3 -->
-                <div class="service-card card-glass p-8 rounded-3xl text-center">
+                <div class="service-card border border-white/10 p-8 rounded-3xl text-center" style="background: rgba(255,255,255,0.03); backdrop-filter: blur(10px);">
                     <div class="icon-circle">📊</div>
-                    <h4 class="text-2xl font-bold text-gray-800 mb-4">التقارير العلمية</h4>
-                    <p class="text-gray-600 mb-6 text-lg">تقارير مفصلة ومنسقة بشكل احترافي</p>
-                    <ul class="text-gray-600 space-y-3 mb-8 text-right">
-                        <li class="flex items-center justify-center">
-                            <span class="text-green-500 ml-2">✓</span>
-                            تحليل دقيق
-                        </li>
-                        <li class="flex items-center justify-center">
-                            <span class="text-green-500 ml-2">✓</span>
-                            تنسيق احترافي
-                        </li>
-                        <li class="flex items-center justify-center">
-                            <span class="text-green-500 ml-2">✓</span>
-                            مراجعة شاملة
-                        </li>
+                    <h4 class="text-2xl font-bold text-yellow-300 mb-4">التقارير العلمية</h4>
+                    <p class="text-gray-300 mb-6 text-base">تقارير مفصلة ومنسقة بشكل احترافي وجذاب</p>
+                    <ul class="text-gray-300 space-y-3 mb-8 text-right inline-block">
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> تحليل علمي دقيق للبيانات</li>
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> تنسيق فني واحترافي ممتاز</li>
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> مراجعة شاملة وتدقيق لغوي</li>
                     </ul>
-                    <a href="https://wa.me/967776280186?text=مرحباً، أريد طلب خدمة التقارير العلمية" target="_blank" rel="noopener noreferrer" class="block w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white text-center py-4 px-6 rounded-2xl font-bold transition-all shadow-lg">
+                    <a href="https://wa.me/967776280186?text=مرحباً، أريد طلب خدمة التقارير العلمية" target="_blank" rel="noopener noreferrer" class="block w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white text-center py-4 px-6 rounded-2xl font-bold transition-all shadow-lg">
                         اطلب مباشرة عبر الواتساب
                     </a>
                 </div>
 
                 <!-- خدمة 4 -->
-                <div class="service-card card-glass p-8 rounded-3xl text-center">
+                <div class="service-card border border-white/10 p-8 rounded-3xl text-center" style="background: rgba(255,255,255,0.03); backdrop-filter: blur(10px);">
                     <div class="icon-circle">🎓</div>
-                    <h4 class="text-2xl font-bold text-gray-800 mb-4">مشاريع التخرج</h4>
-                    <p class="text-gray-600 mb-6 text-lg">مشاريع تخرج متكاملة لجميع التخصصات</p>
-                    <ul class="text-gray-600 space-y-3 mb-8 text-right">
-                        <li class="flex items-center justify-center">
-                            <span class="text-green-500 ml-2">✓</span>
-                            إشراف أكاديمي
-                        </li>
-                        <li class="flex items-center justify-center">
-                            <span class="text-green-500 ml-2">✓</span>
-                            متابعة مستمرة
-                        </li>
-                        <li class="flex items-center justify-center">
-                            <span class="text-green-500 ml-2">✓</span>
-                            ضمان الجودة
-                        </li>
+                    <h4 class="text-2xl font-bold text-yellow-300 mb-4">مشاريع التخرج</h4>
+                    <p class="text-gray-300 mb-6 text-base">مشاريع تخرج متكاملة ومميزة لجميع التخصصات</p>
+                    <ul class="text-gray-300 space-y-3 mb-8 text-right inline-block">
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> إشراف أكاديمي خطوة بخطوة</li>
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> متابعة مستمرة وتعديلات مرنة</li>
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> ضمان جودة العرض والمنهجية</li>
                     </ul>
-                    <a href="https://wa.me/967776280186?text=مرحباً، أريد طلب خدمة مشاريع التخرج" target="_blank" rel="noopener noreferrer" class="block w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white text-center py-4 px-6 rounded-2xl font-bold transition-all shadow-lg">
+                    <a href="https://wa.me/967776280186?text=مرحباً، أريد طلب خدمة مشاريع التخرج" target="_blank" rel="noopener noreferrer" class="block w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white text-center py-4 px-6 rounded-2xl font-bold transition-all shadow-lg">
                         اطلب مباشرة عبر الواتساب
                     </a>
                 </div>
 
                 <!-- خدمة 5 -->
-                <div class="service-card card-glass p-8 rounded-3xl text-center">
+                <div class="service-card border border-white/10 p-8 rounded-3xl text-center" style="background: rgba(255,255,255,0.03); backdrop-filter: blur(10px);">
                     <div class="icon-circle">💼</div>
-                    <h4 class="text-2xl font-bold text-gray-800 mb-4">العروض الاحترافية</h4>
-                    <p class="text-gray-600 mb-6 text-lg">عروض تقديمية متميزة وجذابة</p>
-                    <ul class="text-gray-600 space-y-3 mb-8 text-right">
-                        <li class="flex items-center justify-center">
-                            <span class="text-green-500 ml-2">✓</span>
-                            تصميم احترافي
-                        </li>
-                        <li class="flex items-center justify-center">
-                            <span class="text-green-500 ml-2">✓</span>
-                            محتوى متميز
-                        </li>
-                        <li class="flex items-center justify-center">
-                            <span class="text-green-500 ml-2">✓</span>
-                            تفاعلية عالية
-                        </li>
+                    <h4 class="text-2xl font-bold text-yellow-300 mb-4">العروض الاحترافية</h4>
+                    <p class="text-gray-300 mb-6 text-base">عروض تقديمية (PowerPoint) متميزة ومبهرة</p>
+                    <ul class="text-gray-300 space-y-3 mb-8 text-right inline-block">
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> تصميم عصري وجذاب مخصص</li>
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> تلخيص ذكي ومحتوى رصين</li>
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> تفاعلية عالية تدعم الشرح</li>
                     </ul>
-                    <a href="https://wa.me/967776280186?text=مرحباً، أريد طلب خدمة العروض الاحترافية" target="_blank" rel="noopener noreferrer" class="block w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white text-center py-4 px-6 rounded-2xl font-bold transition-all shadow-lg">
+                    <a href="https://wa.me/967776280186?text=مرحباً، أريد طلب خدمة العروض الاحترافية" target="_blank" rel="noopener noreferrer" class="block w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white text-center py-4 px-6 rounded-2xl font-bold transition-all shadow-lg">
                         اطلب مباشرة عبر الواتساب
                     </a>
                 </div>
 
                 <!-- خدمة 6 -->
-                <div class="service-card card-glass p-8 rounded-3xl text-center">
+                <div class="service-card border border-white/10 p-8 rounded-3xl text-center" style="background: rgba(255,255,255,0.03); backdrop-filter: blur(10px);">
                     <div class="icon-circle">💰</div>
-                    <h4 class="text-2xl font-bold text-gray-800 mb-4">تكاليف مناسبة</h4>
-                    <p class="text-gray-600 mb-6 text-lg">أسعار تنافسية وعروض خاصة للطلاب</p>
-                    <ul class="text-gray-600 space-y-3 mb-8 text-right">
-                        <li class="flex items-center justify-center">
-                            <span class="text-green-500 ml-2">✓</span>
-                            أسعار مدروسة
-                        </li>
-                        <li class="flex items-center justify-center">
-                            <span class="text-green-500 ml-2">✓</span>
-                            خصومات للكمية
-                        </li>
-                        <li class="flex items-center justify-center">
-                            <span class="text-green-500 ml-2">✓</span>
-                            طرق دفع متنوعة
-                        </li>
+                    <h4 class="text-2xl font-bold text-yellow-300 mb-4">تكاليف مناسبة</h4>
+                    <p class="text-gray-300 mb-6 text-base">أسعار تنافسية للغاية وعروض خاصة مستمرة</p>
+                    <ul class="text-gray-300 space-y-3 mb-8 text-right inline-block">
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> خطط أسعار مدروسة ومرنة</li>
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> خصومات ممتازة للمجموعات</li>
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> طرق دفع سهلة ومتنوعة</li>
                     </ul>
-                    <a href="https://wa.me/967776280186?text=مرحباً، أريد الاستفسار عن التكاليف والأسعار" target="_blank" rel="noopener noreferrer" class="block w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white text-center py-4 px-6 rounded-2xl font-bold transition-all shadow-lg">
+                    <a href="https://wa.me/967776280186?text=مرحباً، أريد الاستفسار عن التكاليف والأسعار" target="_blank" rel="noopener noreferrer" class="block w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white text-center py-4 px-6 rounded-2xl font-bold transition-all shadow-lg">
                         استفسر عن الأسعار
                     </a>
                 </div>
@@ -278,94 +288,10 @@
         </div>
     </section>
 
-    <!-- Vision, Mission & Goals Section -->
-    <section id="vision" class="py-20 bg-gradient-to-b from-indigo-900 to-purple-900 text-white">
-        <div class="container mx-auto px-4">
-            <h3 class="text-5xl font-bold text-center text-yellow-300 mb-16">توجهاتنا الاستراتيجية</h3>
-            <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-                <!-- الرؤية -->
-                <div class="p-8 rounded-3xl text-center border border-white/10" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(5px);">
-                    <div class="w-16 h-16 bg-yellow-400 text-gray-900 rounded-2xl flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-lg">👁️</div>
-                    <h4 class="text-2xl font-bold text-yellow-300 mb-4">رؤيتنا</h4>
-                    <p class="text-gray-200 text-lg leading-relaxed">أن نكون المنصة الرائدة والأولى في تقديم الخدمات الطلابية والأكاديمية والبحثية المبتكرة والاحترافية على مستوى المملكة والوطن العربي.</p>
-                </div>
-
-                <!-- الرسالة -->
-                <div class="p-8 rounded-3xl text-center border border-white/10" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(5px);">
-                    <div class="w-16 h-16 bg-pink-500 text-white rounded-2xl flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-lg">✉️</div>
-                    <h4 class="text-2xl font-bold text-pink-300 mb-4">رسالتنا</h4>
-                    <p class="text-gray-200 text-lg leading-relaxed">تمكين الطلاب والباحثين من تحقيق التميز والنجاح الأكاديمي عبر تقديم حلول تعليمية متميزة وبحوث علمية رصينة وموثوقة، مع الالتزام التام بالسرعة والأمانة العلمية.</p>
-                </div>
-
-                <!-- الأهداف -->
-                <div class="p-8 rounded-3xl text-center border border-white/10" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(5px);">
-                    <div class="w-16 h-16 bg-green-400 text-gray-900 rounded-2xl flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-lg">🎯</div>
-                    <h4 class="text-2xl font-bold text-green-300 mb-4">أهدافنا</h4>
-                    <ul class="text-gray-200 space-y-3 text-right inline-block mx-auto text-lg">
-                        <li class="flex items-start">
-                            <span class="text-yellow-300 ml-2">✦</span>
-                            توفير بحوث علمية خالية من التشابه والسرقات الأدبية.
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-yellow-300 ml-2">✦</span>
-                            مساعدة الطلاب في تخطي عقبات المهام الدراسية المعقدة.
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-yellow-300 ml-2">✦</span>
-                            تقديم عروض تقديمية ومشاريع تخرج تضمن أعلى الدرجات.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-gradient-to-r from-purple-100 to-blue-100">
-        <div class="container mx-auto px-4">
-            <div class="max-w-6xl mx-auto text-center">
-                <h3 class="text-5xl font-bold text-gray-800 mb-16">لماذا منصة خدماتي؟</h3>
-                <div class="grid md:grid-cols-3 gap-10">
-                                        <div class="card-glass p-10 rounded-3xl text-center">
-                        <div class="icon-circle bg-gradient-to-r from-yellow-400 to-orange-500">⭐</div>
-                        <h4 class="text-2xl font-bold mb-4">جودة عالية</h4>
-                        <p class="text-gray-600 text-lg">نضمن أعلى معايير الجودة في جميع أعمالنا</p>
-                    </div>
-                    <div class="card-glass p-10 rounded-3xl text-center">
-                        <div class="icon-circle bg-gradient-to-r from-blue-400 to-purple-500">⚡</div>
-                        <h4 class="text-2xl font-bold mb-4">سرعة التسليم</h4>
-                        <p class="text-gray-600 text-lg">التزام تام بالمواعيد المحددة</p>
-                    </div>
-                    <div class="card-glass p-10 rounded-3xl text-center">
-                        <div class="icon-circle bg-gradient-to-r from-green-400 to-teal-500">🛡️</div>
-                        <h4 class="text-2xl font-bold mb-4">ضمان الخصوصية</h4>
-                        <p class="text-gray-600 text-lg">حماية كاملة لبيانات العملاء</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20">
-        <div class="container mx-auto px-4">
-            <h3 class="text-5xl font-bold text-center text-gray-800 mb-16">تواصل معنا</h3>
-            <div class="grid md:grid-cols-2 gap-16 max-w-6xl mx-auto">
-                <div class="space-y-8">
-                    <div class="flex items-center space-x-6 space-x-reverse card-glass p-6 rounded-2xl">
-                        <div class="bg-green-100 p-4 rounded-full">
-                            <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            
-                                               </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-</body>
-</html>
+    <!-- ========================================== -->
+    <!-- 3. قسم الرؤية، الرسالة والأهداف (Vision & Goals) -->
+    <!-- ========================================== -->
+    <section id="vision" class="py-24 bg-gradient-to-b from-indigo-950 to-purple-950 text-white relative">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h3 class="text-4xl md:text-5xl font-black text-center text-yellow-300 mb-16">توجهاتنا الاستراتيجية</h3>
+            <div class=
