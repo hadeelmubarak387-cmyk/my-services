@@ -395,6 +395,70 @@
             <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397 0 11.93 0c3.165.001 6.14 1.233 8.377 3.469 2.237 2.235 3.469 5.211 3.469 8.378 0 6.534-5.337 11.883-11.87 11.883-2.003-.001-3.972-.511-5.713-1.488L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.743 1.451 5.416 0 9.822-4.379 9.824-9.766C21.215 5.46 16.81 1.14 11.4 1.14c-5.418 0-9.826 4.38-9.828 9.767-.001 1.681.455 3.321 1.32 4.777l-.988 3.607 3.703-.964z"/>
         </svg>
     </a>
+<!-- ========================================== -->
+<!-- زر الثلاث نقاط العائم واللوحة المنبثقة -->
+<!-- ========================================== -->
+
+<!-- زر الثلاث نقاط (يظهر ثابت في زاوية الشاشة العلوية اليسرى) -->
+<button onclick="toggleGlobalMenu()" class="fixed top-24 left-6 z-50 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white p-4 rounded-2xl border border-white/20 shadow-2xl flex items-center justify-center transition-all transform hover:scale-110 active:scale-95" title="قائمة المنصة الشاملة">
+    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 6a2 2 0 110-4 2 2 0 010 4zm0 8a2 2 0 110-4 2 2 0 010 4zm0 8a2 2 0 110-4 2 2 0 010 4z"/>
+    </svg>
+</button>
+
+<!-- اللوحة المنبثقة الشاملة (مخفية تلقائياً) -->
+<div id="globalMenuModal" class="fixed inset-0 z-50 overflow-y-auto bg-indigo-950/80 backdrop-blur-xl transition-all duration-300 opacity-0 pointer-events-none flex items-center justify-center p-4">
+    
+    <!-- محتوى اللوحة الزجاجية -->
+    <div class="border border-white/10 p-8 rounded-[2.5rem] max-w-lg w-full relative space-y-6 text-center transform scale-95 transition-all duration-300" style="background: rgba(255,255,255,0.03); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);">
+        
+        <!-- زر الإغلاق (X) -->
+        <button onclick="toggleGlobalMenu()" class="absolute top-6 right-6 text-gray-400 hover:text-white transition-colors text-2xl font-bold">&times;</button>
+        
+        <!-- الهيدر الخاص باللوحة -->
+        <div class="space-y-2">
+            <div class="text-4xl">🔮</div>
+            <h4 class="text-2xl font-black text-yellow-300">دليل المنصة الشامل</h4>
+            <p class="text-gray-400 text-xs">كل ما تحتاجه للوصول السريع إلى خدماتنا الأكاديمية</p>
+        </div>
+
+        <hr class="border-white/10">
+
+        <!-- شبكة الروابط السريعة لكامل الموقع -->
+        <div class="grid grid-cols-2 gap-4">
+            <a href="#services" onclick="toggleGlobalMenu()" class="p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-pink-500/50 hover:bg-pink-500/10 transition-all text-right space-y-1">
+                <div class="text-lg">📚 الخدمات الأكاديمية</div>
+                <div class="text-xs text-gray-400">بحوث، واجبات، تقارير ومشاريع</div>
+            </a>
+            
+            <a href="#courses" onclick="toggleGlobalMenu()" class="p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-yellow-500/50 hover:bg-yellow-500/10 transition-all text-right space-y-1">
+                <div class="text-lg">🎓 الدورات والشهادات</div>
+                <div class="text-xs text-gray-400">استخراج وتفعيل الشهادات فوراً</div>
+            </a>
+
+            <a href="#vision" onclick="toggleGlobalMenu()" class="p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-purple-500/50 hover:bg-purple-500/10 transition-all text-right space-y-1">
+                <div class="text-lg">🎯 الرؤية والأهداف</div>
+                <div class="text-xs text-gray-400">توجهاتنا الاستراتيجية ورسالتنا</div>
+            </a>
+
+            <a href="#about" onclick="toggleGlobalMenu()" class="p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-emerald-500/50 hover:bg-emerald-500/10 transition-all text-right space-y-1">
+                <div class="text-lg">🛡️ لماذا نحن؟</div>
+                <div class="text-xs text-gray-400">الأمانة العلمية ومميزات المنصة</div>
+            </a>
+        </div>
+
+        <hr class="border-white/10">
+
+        <!-- زر الاتصال السريع -->
+        <div class="space-y-3">
+            <p class="text-xs text-gray-400">هل تحتاج لمساعدة مباشرة من الإدارة؟</p>
+            <a href="https://wa.me/967776280186?text=مرحباً، دخلت عبر دليل المنصة الشامل وأريد الاستفسار" target="_blank" rel="noopener noreferrer" class="block w-full py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold rounded-2xl shadow-lg transition-all">
+                📱 تواصل مباشر عبر الواتساب
+            </a>
+        </div>
+
+    </div>
+</div>
 
 </body>
 </html>
