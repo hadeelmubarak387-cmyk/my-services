@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مكتبة هديل للخدمات الطلابية - بحوث عالية الجودة وخدمات أكاديمية متميزة</title>
+    <meta name="description" content="مكتبة هديل للخدمات الطلابية تقدم بحوث عالية الجودة، عروض احترافية، واجبات دراسية، تقارير علمية، ومشاريع تخرج. خدمة عملاء 24 ساعة.">
+    <meta name="keywords" content="مكتبة هديل, خدمات طلابية, بحوث جامعية, واجبات دراسية, تقارير علمية, مشاريع تخرج">
+    <meta name="author" content="مكتبة هديل للخدمات الطلابية">
+    <meta property="og:title" content="مكتبة هديل للخدمات الطلابية">
+    <meta property="og:description" content="خدمات أكاديمية متميزة وبحوث عالية الجودة">
+    <meta property="og:type" content="website">
+    
+    <!-- استدعاء مكتبة Tailwind CSS للتصميم -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#ec4899',
+                        accent: '#10b981'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- خط كايرو المتناسق مع التصاميم الحديثة -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .service-card {
+            transition: all 0.4s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(236, 72, 153, 0.2);
+        }
+        .icon-circle {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem auto;
+            border-radius: 20px;
+            font-size: 2rem;
+            background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+            color: white;
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+        }
+        .whatsapp-btn {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 1000;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+    </style>
+</head>
+<body class="bg-indigo-950 text-white antialiased">
+
+    <!-- ========================================== -->
+    <!-- الهيدر وشريط التنقل (Header & Navigation) -->
+    <!-- ========================================== -->
+    <header class="w-full z-50 fixed top-0 left-0 border-b border-white/10 bg-indigo-950/80 backdrop-blur-md shadow-lg">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center max-w-6xl mx-auto">
+                <div class="flex items-center gap-4">
+                    <div class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white rounded-2xl p-3 shadow-xl">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-black text-yellow-300 leading-tight">مكتبة هديل</h1>
+                        <p class="text-pink-400 text-sm font-bold">للخدمات الطلابية والأكاديمية</p>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8 space-x-reverse">
+                    <a href="#services" class="hover:text-yellow-300 transition-colors text-base font-bold text-gray-200">خدماتنا</a>
+                    <a href="#portfolio" class="hover:text-yellow-300 transition-colors text-base font-bold text-gray-200">أعمالنا</a>
+                    <a href="#vision" class="hover:text-yellow-300 transition-colors text-base font-bold text-gray-200">رؤيتنا وأهدافنا</a>
+                    <a href="#about" class="hover:text-yellow-300 transition-colors text-base font-bold text-gray-200">لماذا نحن؟</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ========================================== -->
+    <!-- 1. قسم الواجهة الرئيسية (Hero Section) -->
+    <!-- ========================================== -->
+    <section id="hero" class="relative min-h-screen pt-36 pb-20 bg-gradient-to-tr from-indigo-950 via-purple-900 to-indigo-900 text-white overflow-hidden flex items-center">
+        
+        <div class="absolute top-1/4 -right-20 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-1/4 -left-20 w-96 h-96 bg-yellow-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+                
+                <div class="text-right space-y-6 order-2 lg:order-1">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-pink-500/30 text-pink-300 text-sm font-medium bg-white/5 backdrop-blur-md">
+                        <span class="flex h-2 w-2 relative">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-pink-500"></span>
+                        </span>
+                        بوابتك الأكاديمية نحو التميز والنجاح
+                    </div>
+                    
+                    <h2 class="text-4xl md:text-6xl font-black leading-tight">
+                        مكتبة هديل تحوّل جهودك إلى <br>
+                        <span class="bg-gradient-to-r from-yellow-300 via-pink-400 to-purple-300 bg-clip-text text-transparent">إنجازات استثنائية</span>
+                    </h2>
+                    
+                    <p class="text-gray-300 text-lg md:text-xl leading-relaxed max-w-xl">
+                        نقدم خدمات أكاديمية متميزة وعروض احترافية لجميع المراحل الدراسية بأعلى معايير الجودة، من الأبحاث المتميزة ومشاريع التخرج وحتى الواجبات التي تضمن لك الصدارة.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <a href="https://wa.me/967776280186" target="_blank" rel="noopener noreferrer" class="whatsapp-btn px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 font-bold rounded-2xl shadow-lg shadow-emerald-500/20 transition-all transform hover:-translate-y-1 text-center min-w-[200px] flex items-center justify-center gap-2">
+                            📱 اطلب على الواتس الآن
+                        </a>
+                        <a href="#services" class="px-8 py-4 border border-white/20 hover:bg-white/10 font-bold rounded-2xl transition-all text-center min-w-[160px] bg-white/5 backdrop-blur-md">
+                            استكشف خدماتنا
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-white/10 max-w-lg">
+                        <div class="bg-white/5 backdrop-blur-md p-4 rounded-2xl border border-white/10 text-center">
+                            <div class="text-2xl md:text-3xl font-black text-yellow-300 flex justify-center items-center gap-0.5">
+                                <span>+</span><span class="counter" data-target="500">0</span>
+                            </div>
+                            <div class="text-xs md:text-sm text-gray-300 font-bold mt-1">طالب مستفيد</div>
+                        </div>
+
+                        <div class="bg-white/5 backdrop-blur-md p-4 rounded-2xl border border-white/10 text-center">
+                            <div class="text-2xl md:text-3xl font-black text-pink-400 flex justify-center items-center gap-0.5">
+                                <span>%</span><span class="counter" data-target="100">0</span>
+                            </div>
+                            <div class="text-xs md:text-sm text-gray-300 font-bold mt-1">أمانة علمية</div>
+                        </div>
+
+                        <div class="bg-white/5 backdrop-blur-md p-4 rounded-2xl border border-white/10 text-center">
+                            <div class="text-2xl md:text-3xl font-black text-emerald-400">24/7</div>
+                            <div class="text-xs md:text-sm text-gray-300 font-bold mt-1">دعم متواصل</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="order-1 lg:order-2 flex justify-center">
+                    <div class="relative p-6 rounded-[2.5rem] border border-white/10 shadow-2xl overflow-hidden max-w-md w-full bg-white/5 backdrop-blur-md">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-purple-500/10 to-pink-500/10 pointer-events-none"></div>
+                        
+                        <div class="w-full aspect-square bg-indigo-950/40 rounded-[2rem] flex flex-col items-center justify-center p-8 text-center space-y-6 border border-white/5">
+                            <div class="text-7xl animate-bounce duration-1000">🎓</div>
+                            <h3 class="text-2xl font-bold text-yellow-300">التميز الأكاديمي يبدأ من هنا</h3>
+                            <p class="text-gray-300 text-sm leading-relaxed">أبحاث خالية من الاقتباس، صياغة لغوية دقيقة، ومشاريع تضمن لك التميز أمام لجان التحكيم.</p>
+                            <div class="flex gap-2 text-xl bg-white/5 px-4 py-2 rounded-full border border-white/10">
+                                <span>📚</span> <span>💻</span> <span>📝</span> <span>📊</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const speed = 40; 
+                const inc = Math.ceil(target / speed);
+
+                if (count < target) {
+                    counter.innerText = count + inc > target ? target : count + inc;
+                    setTimeout(updateCount, 40);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            updateCount();
+        });
+    });
+    </script>
+
+    <!-- ========================================== -->
+    <!-- 2. قسم الخدمات المتميزة (Services) -->
+    <!-- ========================================== -->
+    <section id="services" class="py-24 relative bg-indigo-900/40">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center space-y-4 mb-16">
+                <h3 class="text-4xl md:text-5xl font-black text-white">خدماتنا المتميزة</h3>
+                <p class="text-gray-400 max-w-xl mx-auto">نلبي كافة احتياجاتك الأكاديمية تحت سقف واحد وباحترافية شديدة</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- خدمة 1 -->
+                <div class="service-card border border-white/10 p-8 rounded-3xl text-center bg-white/5 backdrop-blur-md">
+                    <div class="icon-circle">📚</div>
+                    <h4 class="text-2xl font-bold text-yellow-300 mb-4">البحوث العلمية</h4>
+                    <p class="text-gray-300 mb-6 text-base">بحوث عالية الجودة معدة بأحدث المعايير الأكاديمية</p>
+                    <ul class="text-gray-300 space-y-3 mb-8 text-right inline-block">
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> مراجع موثقة وموثوقة</li>
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> خالية تماماً من الانتحال</li>
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> تسليم دقيق في الوقت المحدد</li>
+                    </ul>
+                    <a href="https://wa.me/967776280186?text=مرحباً، أريد طلب خدمة البحوث العلمية من مكتبة هديل" target="_blank" rel="noopener noreferrer" class="block w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white text-center py-4 px-6 rounded-2xl font-bold transition-all shadow-lg">
+                        اطلب مباشرة عبر الواتساب
+                    </a>
+                </div>
+
+                <!-- خدمة 2 -->
+                <div class="service-card border border-white/10 p-8 rounded-3xl text-center bg-white/5 backdrop-blur-md">
+                    <div class="icon-circle">📝</div>
+                    <h4 class="text-2xl font-bold text-yellow-300 mb-4">الواجبات الدراسية</h4>
+                    <p class="text-gray-300 mb-6 text-base">حلول شاملة لجميع الواجبات والتكليفات الجامعية</p>
+                    <ul class="text-gray-300 space-y-3 mb-8 text-right inline-block">
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> تغطية شاملة لجميع التخصصات</li>
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> حلول نموذجية دقيقة</li>
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> أسعار ملائمة ومناسبة للطلاب</li>
+                    </ul>
+                    <a href="https://wa.me/967776280186?text=مرحباً، أريد طلب خدمة الواجبات الدراسية من مكتبة هديل" target="_blank" rel="noopener noreferrer" class="block w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white text-center py-4 px-6 rounded-2xl font-bold transition-all shadow-lg">
+                        اطلب مباشرة عبر الواتساب
+                    </a>
+                </div>
+
+                <!-- خدمة 3 -->
+                <div class="service-card border border-white/10 p-8 rounded-3xl text-center bg-white/5 backdrop-blur-md">
+                    <div class="icon-circle">📊</div>
+                    <h4 class="text-2xl font-bold text-yellow-300 mb-4">التقارير العلمية</h4>
+                    <p class="text-gray-300 mb-6 text-base">تقارير مفصلة ومنسقة بشكل احترافي وجذاب</p>
+                    <ul class="text-gray-300 space-y-3 mb-8 text-right inline-block">
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> تحليل علمي دقيق للبيانات</li>
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> تنسيق فني واحترافي ممتاز</li>
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> مراجعة شاملة وتدقيق لغوي</li>
+                    </ul>
+                    <a href="https://wa.me/967776280186?text=مرحباً، أريد طلب خدمة التقارير العلمية من مكتبة هديل" target="_blank" rel="noopener noreferrer" class="block w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white text-center py-4 px-6 rounded-2xl font-bold transition-all shadow-lg">
+                        اطلب مباشرة عبر الواتساب
+                    </a>
+                </div>
+
+                <!-- خدمة 4 -->
+                <div class="service-card border border-white/10 p-8 rounded-3xl text-center bg-white/5 backdrop-blur-md">
+                    <div class="icon-circle">🎓</div>
+                    <h4 class="text-2xl font-bold text-yellow-300 mb-4">مشاريع التخرج</h4>
+                    <p class="text-gray-300 mb-6 text-base">مشاريع تخرج متكاملة ومميزة لجميع التخصصات</p>
+                    <ul class="text-gray-300 space-y-3 mb-8 text-right inline-block">
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> إشراف أكاديمي خطوة بخطوة</li>
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> متابعة مستمرة وتعديلات مرنة</li>
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> ضمان جودة العرض والمنهجية</li>
+                    </ul>
+                    <a href="https://wa.me/967776280186?text=مرحباً، أريد طلب خدمة مشاريع التخرج من مكتبة هديل" target="_blank" rel="noopener noreferrer" class="block w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white text-center py-4 px-6 rounded-2xl font-bold transition-all shadow-lg">
+                        اطلب مباشرة عبر الواتساب
+                    </a>
+                </div>
+
+                <!-- خدمة 5 -->
+                <div class="service-card border border-white/10 p-8 rounded-3xl text-center bg-white/5 backdrop-blur-md">
+                    <div class="icon-circle">💼</div>
+                    <h4 class="text-2xl font-bold text-yellow-300 mb-4">العروض الاحترافية</h4>
+                    <p class="text-gray-300 mb-6 text-base">عروض تقديمية (PowerPoint) متميزة ومبهرة</p>
+                    <ul class="text-gray-300 space-y-3 mb-8 text-right inline-block">
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> تصميم عصري وجذاب مخصص</li>
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> تلخيص ذكي ومحتوى رصين</li>
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> تفاعلية عالية تدعم الشرح</li>
+                    </ul>
+                    <a href="https://wa.me/967776280186?text=مرحباً، أريد طلب خدمة العروض الاحترافية من مكتبة هديل" target="_blank" rel="noopener noreferrer" class="block w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white text-center py-4 px-6 rounded-2xl font-bold transition-all shadow-lg">
+                        اطلب مباشرة عبر الواتساب
+                    </a>
+                </div>
+
+                <!-- خدمة السيرة الذاتية الاحترافية -->
+                <div class="service-card border border-white/10 p-8 rounded-3xl text-center bg-white/5 backdrop-blur-md">
+                    <div class="icon-circle">📄</div>
+                    <h4 class="text-2xl font-bold text-yellow-300 mb-4">السيرة الذاتية الاحترافية</h4>
+                    <p class="text-gray-300 mb-6 text-base">تصميم وكتابة سيرة ذاتية (CV) تفتح لك أبواب الوظائف والتدريب</p>
+                    <ul class="text-gray-300 space-y-3 mb-8 text-right inline-block">
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> متوافقة مع أنظمة الفرز الذكي (ATS)</li>
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> صياغة احترافية باللغتين العربية والإنجليزية</li>
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> تصاميم عصرية وجذابة تلفت انتباه الشركات</li>
+                    </ul>
+                    <a href="https://wa.me/967776280186?text=مرحباً، أريد طلب خدمة عمل سيرة ذاتية احترافية من مكتبة هديل" target="_blank" rel="noopener noreferrer" class="block w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white text-center py-4 px-6 rounded-2xl font-bold transition-all shadow-lg">
+                        اطلب سيرتك الذاتية الآن
+                    </a>
+                </div>
+
+                <!-- خدمة تصميم الدعوات الرقمية -->
+                <div class="service-card border border-white/10 p-8 rounded-3xl text-center bg-white/5 backdrop-blur-md">
+                    <div class="icon-circle">✉️</div>
+                    <h4 class="text-2xl font-bold text-yellow-300 mb-4">تصميم الدعوات الرقمية</h4>
+                    <p class="text-gray-300 mb-6 text-base">تصميم كروت ودعوات إلكترونية مبتكرة لكافة مناسباتكم السعيدة</p>
+                    <ul class="text-gray-300 space-y-3 mb-8 text-right inline-block">
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> دعوات تخرج ومناسبات أكاديمية فاخرة</li>
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> تصاميم ثنائية الأبعاد وفيديو (متحركة) حسب الطلب</li>
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> ألوان متناسقة وصياغة عبارات ترحيبية راقية</li>
+                    </ul>
+                    <a href="https://wa.me/967776280186?text=مرحباً، أريد طلب خدمة تصميم كروت ودعوات إلكترونية من مكتبة هديل" target="_blank" rel="noopener noreferrer" class="block w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white text-center py-4 px-6 rounded-2xl font-bold transition-all shadow-lg">
+                        اطلب تصميم دعوتك الآن
+                    </a>
+                </div>
+
+                <!-- خدمة 6 -->
+                <div class="service-card border border-white/10 p-8 rounded-3xl text-center bg-white/5 backdrop-blur-md">
+                    <div class="icon-circle">💰</div>
+                    <h4 class="text-2xl font-bold text-yellow-300 mb-4">تكاليف مناسبة</h4>
+                    <p class="text-gray-300 mb-6 text-base">أسعار تنافسية للغاية وعروض خاصة مستمرة</p>
+                    <ul class="text-gray-300 space-y-3 mb-8 text-right inline-block">
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> خطط أسعار مدروسة ومرنة</li>
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> خصومات ممتازة للمجموعات</li>
+                        <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> طرق دفع سهلة ومتنوعة</li>
+                    </ul>
+                    <a href="https://wa.me/967776280186?text=مرحباً، أريد الاستفسار عن التكاليف والأسعار في مكتبة هديل" target="_blank" rel="noopener noreferrer" class="block w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white text-center py-4 px-6 rounded-2xl font-bold transition-all shadow-lg">
+                        استفسر عن الأسعار
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- قسم أعمالنا السابقة (معدل بخلفية بيضاء) -->
+    <!-- ========================================== -->
+    <section id="portfolio" class="py-20 bg-white text-center relative border-t border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-4">
+            
+            <div class="mb-12 space-y-3">
+                <h3 class="text-3xl md:text-4xl font-black text-slate-900">📁 أعمالنا السابقة</h3>
+                <p class="text-slate-600 text-base max-w-xl mx-auto">نماذج من الأبحاث والتقارير الأكاديمية التي قمنا بإعدادها لمساعدة طلابنا</p>
+            </div>
+
+            <div class="flex flex-wrap gap-8 justify-center">
+                
+                <!-- بطاقة عمل 1 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 w-full max-w-sm flex flex-col justify-between shadow-lg hover:shadow-xl transition-shadow">
+                    <div>
+                        <div class="text-5xl mb-4">📄</div>
+                        <h4 class="text-xl font-bold text-slate-800 mb-3">نموذج بحث أكاديمي</h4>
+                        <p class="text-sm text-slate-600 mb-6 leading-relaxed">
+                            معاينة لأسلوب التوثيق العلمية ودقة التنسيق المعتمدة في أبحاثنا.
+                        </p>
+                    </div>
+                    
+                    <div class="flex flex-col gap-3">
+                        <a href="https://drive.google.com/file/d/15oBo7DFLZOBxrJ-rwtktOd8q1_D82Kk6/view?usp=sharing" 
+                           target="_blank" 
+                           class="bg-emerald-600 hover:bg-emerald-700 text-white py-3 px-4 rounded-xl font-bold text-sm transition-all shadow-md">
+                           👁️ معاينة الملف
+                        </a>
+                        
+                        <a href="https://drive.google.com/uc?export=download&id=15oBo7DFLZOBxrJ-rwtktOd8q1_D82Kk6" 
+                           class="bg-sky-600 hover:bg-sky-700 text-white py-3 px-4 rounded-xl font-bold text-sm transition-all shadow-md">
+                           📥 تنزيل مباشرة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- بطاقة عمل 2 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 w-full max-w-sm flex flex-col justify-between shadow-lg hover:shadow-xl transition-shadow">
+                    <div>
+                        <div class="text-5xl mb-4">📊</div>
+                        <h4 class="text-xl font-bold text-slate-800 mb-3">نموذج عرض تقديمي (PPT)</h4>
+                        <p class="text-sm text-slate-600 mb-6 leading-relaxed">
+                            تصميم عصري وجذاب لعروض مشاريع التخرج والواجبات.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <a href="https://wa.me/967776280186?text=مرحباً مكتبة هديل، أريد رؤية نماذج من العروض التقديمية" 
+                           target="_blank" 
+                           class="bg-green-500 hover:bg-green-600 text-white py-3 px-4 rounded-xl font-bold text-sm transition-all shadow-md block">
+                           💬 اطلب نموذج عبر الواتساب
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 3. قسم الرؤية، الرسالة والأهداف (Vision & Goals) -->
+    <!-- ========================================== -->
+    <section id="vision" class="py-24 bg-gradient-to-b from-indigo-950 to-purple-950 text-white relative">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h3 class="text-4xl md:text-5xl font-black text-center text-yellow-300 mb-16">توجهاتنا الاستراتيجية</h3>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- كرت الرؤية -->
+                <div class="border border-white/10 p-8 rounded-3xl text-center relative overflow-hidden bg-white/5 backdrop-blur-md">
+                    <div class="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-transparent pointer-events-none"></div>
+                    <div class="text-4xl mb-4">👁️</div>
+                    <h4 class="text-2xl font-bold text-pink-400 mb-4">رؤيتنا</h4>
+                    <p class="text-gray-300 leading-relaxed text-sm md:text-base">
+                        أن نكون المكتبة والمكتب الأكاديمي الأول والأكثر موثوقية في تقديم الدعم الطلابي والبحثي، ومرافقة الطلاب في مسيرتهم التعليمية لتحقيق أعلى درجات التميز والصدارة.
+                    </p>
+                </div>
+
+                <!-- كرت الرسالة -->
+                <div class="border border-white/10 p-8 rounded-3xl text-center relative overflow-hidden bg-white/5 backdrop-blur-md">
+                    <div class="absolute inset-0 bg-gradient-to-br from-yellow-500/5 to-transparent pointer-events-none"></div>
+                    <div class="text-4xl mb-4">🎯</div>
+                    <h4 class="text-2xl font-bold text-yellow-300 mb-4">رسالتنا</h4>
+                    <p class="text-gray-300 leading-relaxed text-sm md:text-base">
+                        تقديم خدمات طلابية وبحوث علمية متكاملة ومصاغة بدقة عالية، تلتزم بمعايير الأمانة العلمية والجودة الاحترافية، وبأسعار تنافسية تناسب الجميع.
+                    </p>
+                </div>
+
+                <!-- كرت الأهداف -->
+                <div class="border border-white/10 p-8 rounded-3xl text-center relative overflow-hidden bg-white/5 backdrop-blur-md">
+                    <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent pointer-events-none"></div>
+                    <div class="text-4xl mb-4">🚀</div>
+                    <h4 class="text-2xl font-bold text-purple-400 mb-4">أهدافنا</h4>
+                    <ul class="text-gray-300 text-right text-sm md:text-base space-y-2 inline-block">
+                        <li class="flex items-center gap-2"><span class="text-yellow-300">•</span> ضمان جودة المخرجات الأكاديمية للطلاب.</li>
+                        <li class="flex items-center gap-2"><span class="text-yellow-300">•</span> توفير وقت وجهد الطالب ببدائل وحلول احترافية.</li>
+                        <li class="flex items-center gap-2"><span class="text-yellow-300">•</span> الالتزام التام بمواعيد التسليم والأمانة العلمية.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 4. قسم مميزات المكتبة (Why Us) -->
+    <!-- ========================================== -->
+    <section id="about" class="py-24 relative bg-indigo-900/20 border-t border-white/5">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center space-y-4 mb-16">
+                <h3 class="text-4xl md:text-5xl font-black text-white">لماذا يختار الطلاب مكتبتنا؟</h3>
+                <p class="text-gray-400 max-w-xl mx-auto">المقومات والركائز الأساسية التي تجعلنا خيارك الأفضل والآمن دائماً</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="p-6 rounded-2xl border border-white/5 bg-white/5 backdrop-blur-md text-center">
+                    <div class="text-3xl mb-3">🛡️</div>
+                    <h5 class="font-bold text-lg text-white mb-2">أمانة علمية تامة</h5>
+                    <p class="text-gray-400 text-sm">أعمال أصلية 100% وخالية تماماً من السرقة الأدبية أو الاقتباس العشوائي.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl border border-white/5 bg-white/5 backdrop-blur-md text-center">
+                    <div class="text-3xl mb-3">⚡</div>
+                    <h5 class="font-bold text-lg text-white mb-2">سرعة في التنفيذ</h5>
+                    <p class="text-gray-400 text-sm">نقدّر قيمة الوقت؛ لذا نلتزم بتسليم التكليفات في الموعد المحدد أو قبله.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl border border-white/5 bg-white/5 backdrop-blur-md text-center">
+                    <div class="text-3xl mb-3">👥</div>
+                    <h5 class="font-bold text-lg text-white mb-2">نخبة من المختصين</h5>
+                    <p class="text-gray-400 text-sm">فريق متكامل يغطي مجالات متعددة لضمان دقة المحتوى والتحليل.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl border border-white/5 bg-white/5 backdrop-blur-md text-center">
+                    <div class="text-3xl mb-3">🔄</div>
+                    <h5 class="font-bold text-lg text-white mb-2">تعديلات مجانية</h5>
+                    <p class="text-gray-400 text-sm">نتابع معك حتى بعد التسليم، ومستعدون لإجراء التعديلات المطلوبة بكل صدر رحب.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- الفوتر (Footer) -->
+    <!-- ========================================== -->
+    <footer class="border-t border-white/10 bg-indigo-950 py-12 text-center text-gray-400 text-sm">
+        <div class="container mx-auto px-4 max-w-6xl space-y-4">
+            <p class="text-yellow-300 font-bold text-base">مكتبة هديل للخدمات الطلابية والأكاديمية</p>
+            <p>© 2026 جميع الحقوق محفوظة لـ مكتبة هديل.</p>
+            <div class="text-xs text-gray-500 pt-2">
+                تُقدم الخدمة وفق أعلى معايير الجودة والأمانة العلمية لمساعدة الطلاب في تطوير مهاراتهم ومعارفهم.
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- زر الواتساب العائم للتواصل السريع -->
+    <!-- ========================================== -->
+    <a href="https://wa.me/967776280186" target="_blank" rel="noopener noreferrer" class="floating-whatsapp bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl flex items-center justify-center transition-transform hover:scale-110" title="تواصل معنا عبر الواتساب">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397 0 11.93 0c3.165.001 6.14 1.233 8.377 3.469 2.237 2.235 3.469 5.211 3.469 8.378 0 6.534-5.337 11.883-11.87 11.883-2.003-.001-3.972-.511-5.713-1.488L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.743 1.451 5.416 0 9.822-4.379 9.824-9.766C21.215 5.46 16.81 1.14 11.4 1.14c-5.418 0-9.826 4.38-9.828 9.767-.001 1.681.455 3.321 1.32 4.777l-.988 3.607 3.703-.964z"/>
+        </svg>
+    </a>
+
+    <!-- ========================================== -->
+    <!-- زر الثلاث نقاط العائم واللوحة المنبثقة -->
+    <!-- ========================================== -->
+
+    <!-- زر الثلاث نقاط -->
+    <button onclick="toggleGlobalMenu()" class="fixed top-24 left-6 z-50 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white p-4 rounded-2xl border border-white/20 shadow-2xl flex items-center justify-center transition-all transform hover:scale-110 active:scale-95" title="قائمة المكتبة الشاملة">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 6a2 2 0 110-4 2 2 0 010 4zm0 8a2 2 0 110-4 2 2 0 010 4zm0 8a2 2 0 110-4 2 2 0 010 4z"/>
+        </svg>
+    </button>
+
+    <!-- اللوحة المنبثقة الشاملة -->
+    <div id="globalMenuModal" class="fixed inset-0 z-50 overflow-y-auto bg-indigo-950/80 backdrop-blur-xl transition-all duration-300 opacity-0 pointer-events-none flex items-center justify-center p-4">
+        
+        <div class="border border-white/10 p-8 rounded-[2.5rem] max-w-lg w-full relative space-y-6 text-center transform scale-95 transition-all duration-300 bg-white/5 shadow-2xl">
+            
+            <button onclick="toggleGlobalMenu()" class="absolute top-6 right-6 text-gray-400 hover:text-white transition-colors text-2xl font-bold">&times;</button>
+            
+            <div class="space-y-2">
+                <div class="text-4xl">🔮</div>
+                <h4 class="text-2xl font-black text-yellow-300">دليل مكتبة هديل الشامل</h4>
+                <p class="text-gray-400 text-xs">كل ما تحتاجه للوصول السريع إلى خدماتنا الأكاديمية</p>
+            </div>
+
+            <hr class="border-white/10">
+
+            <div class="grid grid-cols-2 gap-4">
+                <a href="#services" onclick="toggleGlobalMenu()" class="p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-pink-500/50 hover:bg-pink-500/10 transition-all text-right space-y-1">
+                    <div class="text-lg">📚 الخدمات الأكاديمية</div>
+                    <div class="text-xs text-gray-400">بحوث، واجبات، تقارير ومشاريع</div>
+                </a>
+                
+                <a href="#portfolio" onclick="toggleGlobalMenu()" class="p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-yellow-500/50 hover:bg-yellow-500/10 transition-all text-right space-y-1">
+                    <div class="text-lg">📁 أعمالنا السابقة</div>
+                    <div class="text-xs text-gray-400">نماذج وملفات جاهزة للمعاينة</div>
+                </a>
+
+                <a href="#vision" onclick="toggleGlobalMenu()" class="p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-purple-500/50 hover:bg-purple-500/10 transition-all text-right space-y-1">
+                    <div class="text-lg">🎯 الرؤية والأهداف</div>
+                    <div class="text-xs text-gray-400">توجهاتنا الاستراتيجية ورسالتنا</div>
+                </a>
+
+                <a href="#about" onclick="toggleGlobalMenu()" class="p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-emerald-500/50 hover:bg-emerald-500/10 transition-all text-right space-y-1">
+                    <div class="text-lg">🛡️ لماذا نحن؟</div>
+                    <div class="text-xs text-gray-400">الأمانة العلمية ومميزات المكتبة</div>
+                </a>
+            </div>
+
+            <hr class="border-white/10">
+
+            <div class="space-y-3">
+                <p class="text-xs text-gray-400">هل تحتاج لمساعدة مباشرة من الإدارة؟</p>
+                <a href="https://wa.me/967776280186?text=مرحباً مكتبة هديل، دخلت عبر الدليل الشامل وأريد الاستفسار" target="_blank" rel="noopener noreferrer" class="block w-full py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold rounded-2xl shadow-lg transition-all">
+                    📱 تواصل مباشر عبر الواتساب
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+    function toggleGlobalMenu() {
+        const modal = document.getElementById('globalMenuModal');
+        const modalContent = modal.querySelector('div');
+        
+        if (modal.classList.contains('pointer-events-none')) {
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            modalContent.classList.remove('scale-95');
+            modalContent.classList.add('scale-100');
+        } else {
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            modalContent.classList.remove('scale-100');
+            modalContent.classList.add('scale-95');
+        }
+    }
+    </script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/6a5138a6a6558f1d451fe67e/default';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+</body>
+</html>
