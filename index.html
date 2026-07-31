@@ -146,23 +146,53 @@
                             استكشف خدماتنا
                         </a>
                     </div>
+<!-- ================= بداية قسم الإحصائيات مع الحركة ================= -->
+<div style="display: flex; gap: 25px; justify-content: flex-start; margin-top: 30px; flex-wrap: wrap;">
+    <div style="text-align: center; min-width: 90px;">
+        <div style="font-size: 32px; font-weight: 800; color: #0284c7; display: flex; justify-content: center; align-items: center;">
+            <span>+</span><span class="counter" data-target="500">0</span>
+        </div>
+        <div style="font-size: 14px; color: #64748b; font-weight: 600;">طالب مستفيد</div>
+    </div>
 
-                    <!-- إحصائيات سريعة -->
-                    <div class="grid grid-cols-3 gap-6 pt-10 border-t border-white/10 max-w-md">
-                        <div>
-                            <div class="text-3xl font-extrabold text-yellow-300">+500</div>
-                            <div class="text-sm text-gray-400 mt-1">طالب مستفيد</div>
-                        </div>
-                        <div>
-                            <div class="text-3xl font-extrabold text-pink-400">%100</div>
-                            <div class="text-sm text-gray-400 mt-1">أمانة علمية</div>
-                        </div>
-                        <div>
-                            <div class="text-3xl font-extrabold text-purple-300">24/7</div>
-                            <div class="text-sm text-gray-400 mt-1">دعم متواصل</div>
-                        </div>
-                    </div>
-                </div>
+    <div style="text-align: center; min-width: 90px;">
+        <div style="font-size: 32px; font-weight: 800; color: #0284c7; display: flex; justify-content: center; align-items: center;">
+            <span>%</span><span class="counter" data-target="100">0</span>
+        </div>
+        <div style="font-size: 14px; color: #64748b; font-weight: 600;">أمانة علمية</div>
+    </div>
+
+    <div style="text-align: center; min-width: 90px;">
+        <div style="font-size: 32px; font-weight: 800; color: #0284c7;">24/7</div>
+        <div style="font-size: 14px; color: #64748b; font-weight: 600;">دعم متواصل</div>
+    </div>
+</div>
+
+<!-- كود تشغيل العداد عند التصفح -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+        const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            const speed = 40; // سرعة العداد
+            const inc = Math.ceil(target / speed);
+
+            if (count < target) {
+                counter.innerText = count + inc > target ? target : count + inc;
+                setTimeout(updateCount, 40);
+            } else {
+                counter.innerText = target;
+            }
+        };
+        updateCount();
+    });
+});
+</script>
+<!-- ================= نهاية قسم الإحصائيات ================= -->
+
+                          
 
                 <!-- الجانب الأيسر: العنصر الزجاجي الجمالي -->
                 <div class="order-1 lg:order-2 flex justify-center">
